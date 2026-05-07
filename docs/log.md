@@ -50,3 +50,14 @@ Created concepts based on ingested sources:
   - 分布式vs大型太阳能并网区别
   - ERCOT Planning Guide关键章节
 - 总页面数: 15
+
+## [2026-04-15] update | ERCOT长期负荷预测与NPRR规则
+- ERCOT 2032初步负荷预测（2026年4月15日发布）：367,790 MW
+- 2023年创纪录负荷：85,508 MW（夏季峰值）
+- 新增市场规则：
+  - NPRR1275：Firm Fuel Supply Service Phase 3
+  - NPRR1278：Advanced Grid Support Service
+  - NPRR1309/1310：Dispatchable Reliability Reserve Service
+- 更新文件：
+  - concepts/ercot-nuclear-gas-generation-policy.md
+  - concepts/ercot-rtc-b-market.md

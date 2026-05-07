@@ -93,6 +93,17 @@ RTC+B（Real-Time Co-optimization Plus Batteries）是ERCOT电力市场自2010�
   - 27 million+ 用户
   - 90% 德州电力负荷
 
+### ERCOT长期负荷预测（2026-2032）
+- **发布**：2026年4月15日（初步预测）
+- **2032年预测**：367,790 MW
+- **2023年记录**：85,508 MW（夏季峰值）
+- **驱动因素**：数据中心、加密货币挖矿、工业增长、油气需求
+
+### 新市场规则（NPRR系列）
+- **NPRR1275**：Firm Fuel Supply Service Phase 3（扩展Qualifying Pipeline定义）
+- **NPRR1278**：Advanced Grid Support Service（先进电网支持服务确立为辅助服务）
+- **NPRR1309/1310**：Dispatchable Reliability Reserve Service（可调度可靠性储备服务）
+
 ### 储能参与情况
 - 2025年12月实时数据显示：
   - 太阳能：0 MW（夜间）

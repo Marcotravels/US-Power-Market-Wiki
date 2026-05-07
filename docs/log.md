@@ -61,3 +61,25 @@ Created concepts based on ingested sources:
 - 更新文件：
   - concepts/ercot-nuclear-gas-generation-policy.md
   - concepts/ercot-rtc-b-market.md
+
+## [2026-05-07] create | Gap Analysis + Research Recommendations
+- Source: 分析了18个现有笔记文件，发现技术扎实但经济分析薄弱
+- 文件添加：
+  - concepts/RECOMMENDATIONS.md — PhD级研究缺口分析
+  - 识别出12个新研究话题（Tier 1-3）
+- 总页面数: 15
+
+## [2026-05-07] create | 8 New Research Topic Documents (Tier 1-3)
+- 新增文档（按优先级）：
+  - Tier 1-1: concepts/carbon-pricing-integration.md — CA cap-and-trade, RGGI, 碳成本对LMP影响, 联邦主义碎片化问题
+  - Tier 1-2: concepts/capacity-market-design.md — PJM RPM拍卖, ELCC容量信用, "缺钱"问题, ERCOT比较
+  - Tier 1-3: comparisons/pjm-vs-ercot.md — 两种市场设计全面比较, Uri极端天气案例研究
+  - Tier 2-5: concepts/ferc-jurisdiction-carbon.md — FERC法律权威, DCC挑战, 州碳边境措施
+  - Tier 2-6: comparisons/state-rps-effectiveness.md — CA/TX/NY RPS对比, 成本效益, 方法论问题
+  - Tier 3-9: concepts/storage-economics.md — 储能收益堆叠, ELCC, 退化模型, 最优duration
+  - Tier 3-10: concepts/environmental-justice-energy.md — 能源转型公正, DAC太阳能, 程序公正
+  - Tier 3-11: concepts/demand-response-economics.md — DR经济学, 价格型vs激励型, BTM/FTM
+  - Tier 3-12: concepts/social-cost-carbon-dispatch.md — SCC方法论, 调度整合, 一般均衡效应
+  - 商业应用: concepts/solar-storage-interconnection-ca-tx.md — 加州/德州并网流程+障碍（中国出海企业）
+- 更新: index.md (总页面数: 27), log.md
+- 总页面数: 27

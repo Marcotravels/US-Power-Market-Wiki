@@ -62,7 +62,19 @@ Created concepts based on ingested sources:
   - concepts/ercot-nuclear-gas-generation-policy.md
   - concepts/ercot-rtc-b-market.md
 
-## [2026-05-07] create | Gap Analysis + Research Recommendations
+## [2026-05-16] ingest | AI电力危机文章
+- Source: 微信公众平台 (mp.weixin.qq.com)
+- Files added:
+  - raw/articles/ai-power-grid-crisis-2026.md
+  - concepts/ai-power-grid-crisis.md（新建概念页）
+- 内容摘要：
+  - 2026年AI算力爆发，数据中心电力需求飙升，美国面临10-20%电力缺口
+  - 机架功率从2020年13kW→2027年目标600kW（未来目标1MW）
+  - 电力已从"后勤问题"变为AI扩张的核心制约因素
+  - 应对：自建燃气微电网（xAI 1.9GW）、核电/SMR、东数西算地理迁移、能效提升
+  - AI双重角色：电力消费者（60GW/120GW新增需求）+ 电力优化者（3-10%节能）
+- 通知：已尝试通知研研学习（sessions_list超时，备用通知方案：Telegram频道）
+- 总页面数: 28
 - Source: 分析了18个现有笔记文件，发现技术扎实但经济分析薄弱
 - 文件添加：
   - concepts/RECOMMENDATIONS.md — PhD级研究缺口分析

@@ -146,6 +146,158 @@
 - **GTSR：** Green Tariff Shared Renewables
 
 ---
-
-*最后更新：2025-04-16*
+*最后更新：2026-05-07*
 *来源：CPUC, CEC, 加州立法机构*
+
+---
+
+# English Version
+
+# California Community Solar Policy
+
+## Overview
+
+Community Solar refers to a model where multiple users jointly invest in or subscribe to a shared solar power project, enabling users who cannot install solar on their own rooftops to still access clean energy electricity. California is one of the pioneers in community solar projects in the United States, with over 15 years of project experience.
+
+## History
+
+### Early Stage (2007-2014)
+
+| Year | Program | Description |
+|------|---------|-------------|
+| 2007 | **SASH** (Single-family Solar Homes) | Low-income family rooftop solar incentive program |
+| 2008 | **MASH** (Multifamily Affordable Solar Homes) | Multi-family low-income housing solar program |
+| 2015 | **SOMAH** (Solar on Multifamily Affordable Housing) | Multifamily affordable housing solar focused on disadvantaged communities (DAC) |
+| 2018 | **DAC-SASH** (DAC Single-family Solar Homes) | Single-family housing solar focused on DAC |
+
+### Development Stage (2014-2022)
+
+- **Green Tariff Shared Renewables (GTSR):** Shared renewable energy program for general market customers
+- **Disadvantaged Communities Green Tariff (DAC-GT):** Green electricity pricing for DAC communities
+- **Community Solar Green Tariff (CSGT):** Community solar green tariff
+- **Enhanced Community Renewables (ECR):** Enhanced community renewable energy
+
+### 2022 Major Reform
+
+**A.22-05-022 Proceeding:**
+- Initiated in May 2022
+- Pursuant to AB 2316 (Ward, 2022) and PUC Section 769.3
+- Reviewed existing community solar projects
+
+## 2024 CPUC Decision
+
+### May 2024 Decision (Decision 24-05-065)
+
+**Key Changes:**
+
+1. **Programs Terminated:**
+   - CSGT (Community Solar Green Tariff)
+   - ECR (Enhanced Community Renewables)
+
+2. **Programs Improved:**
+   - DAC-GT (Disadvantaged Communities Green Tariff)
+   - GT (Green Tariff)
+
+3. **New Program:**
+   - **Community Renewable Energy (CRE) Program**
+   - Avoids shifting costs to non-participating customers
+
+### 2025 Follow-up
+
+- **September 13, 2025:** Decision denying application for rehearing
+- **Second decision expected:** By January 1, 2026
+
+## Current Program Structure
+
+### 1. Modified Green Tariff
+
+**Target users:** General market customers
+
+**Features:**
+- Allows users to subscribe to shared solar projects
+- Receive solar generation credit
+- Maintain traditional grid service
+
+### 2. Disadvantaged Communities Green Tariff (DAC-GT)
+
+**Target users:** Users located in Disadvantaged Communities (DAC) census tracts
+
+**Features:**
+- Provides clean energy access for low-income communities
+- Lower subscription costs
+- Promotes equitable energy transition
+
+### 3. Community Renewable Energy (CRE) Program
+
+**Design Principles:**
+- Avoids shifting costs to non-participating users
+- Expands access to community solar
+- Supports local renewable energy development
+
+## Investment and Outcomes
+
+### Investment Scale
+- Since 2007, California has invested over **$1 billion** in low-income and community renewable energy projects
+
+### Project Outcomes
+- **13,365+** approved projects
+- **430 MW** solar installed capacity (online or in progress)
+
+### Program Comparison
+
+| Program | Target Group | Capacity | Status |
+|---------|-------------|---------|--------|
+| SASH | Low-income single-family households | - | Operating |
+| SOMAH | Multifamily low-income housing | - | Operating |
+| DAC-SASH | DAC single-family households | - | Operating |
+| DAC-GT | DAC community users | - | Improving |
+| CRE | All users | - | Launching 2026 |
+
+## Implications for Solar + Storage
+
+### Energy Storage Integration
+- Community solar projects can integrate energy storage systems
+- Improves project reliability and value
+- Meets CPUC energy storage procurement requirements
+
+### Policy Support
+- ITC (Investment Tax Credit) applies to community solar projects
+- Aligned with California RPS targets (60% by 2030, 100% by 2045)
+
+## Application and Participation Process
+
+### User Participation Methods
+1. **Subscription:** Pay monthly fee for solar credits
+2. **Ownership:** Directly invest in community solar projects
+3. **Lease:** Lease shares in projects
+
+### Credit Calculation
+- Credits based on user's proportion of electricity consumption
+- Credits offset electricity bills
+
+## Future Development
+
+### 2026 Outlook
+- CRE program implementation details finalized
+- Modified GT and CRE programs fully launched
+- Further simplify participation process
+
+### Policy Trends
+- Greater focus on equity and inclusion
+- Expand DAC community participation
+- Integrate energy storage to increase system value
+
+## Related Concepts
+
+- **CPUC:** California Public Utilities Commission
+- **CEC:** California Energy Commission
+- **DAC:** Disadvantaged Communities
+- **RPS:** Renewables Portfolio Standard
+- **CCA:** Community Choice Aggregator
+- **IOU:** Investor-Owned Utility
+- **SASH/MASH/SOMAH:** Various low-income solar incentive programs
+- **GTSR:** Green Tariff Shared Renewables
+
+---
+*Last updated: 2026-05-07*
+*Sources: CPUC, CEC, California Legislature*

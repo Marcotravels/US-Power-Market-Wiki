@@ -1,7 +1,7 @@
 ---
 title: 发电 (Power Generation)
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-05-07
 type: concept
 tags: [generation, terminology]
 sources: [raw/articles/eia-how-electricity-is-generated.md]
@@ -37,6 +37,7 @@ sources: [raw/articles/eia-how-electricity-is-generated.md]
 | 地热 | ~ | 地热能 |
 
 ### 3. 核能
+
 - 核裂变产生热量 → 产生蒸汽 → 驱动蒸汽轮机
 - 占美国发电量约20%
 - 基荷电源（base-load），可调度
@@ -49,6 +50,59 @@ sources: [raw/articles/eia-how-electricity-is-generated.md]
 - **容量因子 (Capacity Factor)**: 实际发电量 / 最大可能发电量
 
 ## 相关概念
+
 - [[power-grid-overview|电网概述]]
 - [[power-transmission|输电]]
 - [[power-distribution|配电]]
+
+---
+
+# English Version
+
+## Power Generation
+
+Power generation is the process of converting primary energy sources into electrical energy. Power plants are the starting point of the power grid.
+
+## Generation Principle
+
+Most generators are based on **Faraday's law of electromagnetic induction**:
+- Moving a magnet through a coil of wire → produces current
+- An electromagnetic generator consists of a **stator** (stationary coils) and a **rotor** (rotating electromagnetic shaft)
+
+## Main Types of Power Generation
+
+### 1. Thermal Power
+
+| Type | Primary Energy | Share (2022) |
+|------|---------------|---------------|
+| Natural gas combined cycle | Natural gas | ~34% |
+| Steam turbine | Coal, natural gas, nuclear | ~42% |
+| Gas turbine | Natural gas | ~ |
+
+### 2. Renewable Energy
+
+| Type | Share (2022) | Characteristics |
+|------|-------------|-----------------|
+| Wind | ~10% | Fastest-growing renewable |
+| Hydro | ~6% | Traditional dispatchable renewable |
+| Solar | ~3% | Rapidly growing, intermittent |
+| Geothermal | ~ | Geothermal energy |
+
+### 3. Nuclear Energy
+
+- Nuclear fission produces heat → generates steam → drives steam turbine
+- Accounts for ~20% of U.S. electricity generation
+- Base-load power source, dispatchable
+
+## Key Concepts
+
+- **Base-load**: The lowest electricity demand period (typically late night), requiring continuously operating generators
+- **Peak load**: High electricity demand period (typically evening), requiring peaking power plants
+- **Dispatchable vs Intermittent**: Thermal/nuclear are dispatchable (can adjust output on demand), wind/solar are non-dispatchable (weather-dependent)
+- **Capacity Factor**: Actual generation / Maximum possible generation
+
+## Related Concepts
+
+- [[power-grid-overview|Power Grid Overview]]
+- [[power-transmission|Transmission]]
+- [[power-distribution|Distribution]]

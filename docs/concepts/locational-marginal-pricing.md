@@ -1,7 +1,5 @@
 # 电力市场节点定价机制
 
-> **English:** Locational Marginal Pricing (LMP) — Nodal Pricing in Electricity Markets
-
 ## 概述
 
 节点边际电价（Locational Marginal Pricing, LMP）是现代电力批发市场中最精细的价格机制。与传统区域统一定价不同，LMP 为电网中**每一个节点（Node）** 计算独立的价格，精确反映该位置在特定时刻的发电成本、输电阻塞成本和输电损耗成本。
@@ -54,8 +52,8 @@ LMP 源于经济学中的**边际成本定价原理**：
 ### LMP 的三个组成部分
 
 ```
-LMP(n, t) = Energy Component(n, t) 
-           + Congestion Component(n, t) 
+LMP(n, t) = Energy Component(n, t)
+           + Congestion Component(n, t)
            + Loss Component(n, t)
 ```
 
@@ -494,8 +492,6 @@ T+1 Day   月底结算：
 - **Hub：** 虚拟枢纽，多个节点归堆后的价格参考点
 - **Bid/Offer：** 投标/报价
 
----
-
 ## 参考来源
 
 - PJM Manual for Locational Marginal Pricing（2024）
@@ -513,6 +509,523 @@ T+1 Day   月底结算：
 - [[interconnection-renewable-comparison]] - 三大互联系统对比：LMP 在各 ISO/RTO 的实施差异
 
 ---
-
-*最后更新：2026-04-15*
+*最后更新：2026-05-07*
 *来源：PJM, CAISO, ISO-NE, MISO, FERC, MIT*
+
+---
+
+# English Version
+
+## Locational Marginal Pricing (LMP) — Nodal Pricing in Electricity Markets
+
+## Overview
+
+Locational Marginal Pricing (LMP) is the most granular pricing mechanism in modern wholesale electricity markets. Unlike traditional zonal uniform pricing, LMP calculates a unique price for **every node** on the power grid, precisely reflecting the generation cost, transmission congestion cost, and transmission loss cost at that location at a specific moment.
+
+LMP is the core pricing basis for major U.S. ISOs/RTOs including PJM, CAISO, ISO-NE, MISO, and SPP. ERCOT is the exception — it uses System Marginal Price without nodal pricing.
+
+---
+
+## Why Nodal Pricing?
+
+### The Flaws of Uniform Pricing
+
+In an ideal electricity market, if the transmission network had unlimited capacity, prices at all locations should be the same. But in reality:
+
+```
+Transmission lines have capacity limits (thermal limits, voltage limits, security constraints)
+       ↓
+Electricity cannot flow freely
+       ↓
+Actual supply costs differ by location
+       ↓
+Uniform pricing causes market failure
+```
+
+**A simple example:**
+- A region has abundant cheap wind power in the west, but insufficient transmission capacity
+- With uniform pricing: should eastern customers pay the western low price, or build expensive local plants?
+- LMP resolves this: western users settle at low prices, eastern users settle at high prices (including congestion cost)
+
+### Core Advantages of LMP
+
+| Advantage | Description |
+|-----------|-------------|
+| **Precise signals** | Each location's price accurately reflects its marginal supply cost |
+| **Investment guidance** | High LMP areas signal need for new generation or transmission investment |
+| **Congestion transparency** | Congestion costs become explicit, driving market participants to self-optimize |
+| **Economic efficiency** | Incentivizes both supply and demand to adjust behavior based on price signals |
+| **Ancillary service integration** | Jointly optimized with ancillary service markets for overall efficiency |
+
+---
+
+## Mathematical Foundation of LMP
+
+### Economic Marginal Cost Pricing
+
+LMP is derived from the economic principle of **marginal cost pricing**:
+
+> LMP = The minimum incremental system cost of supplying one additional MW of load at that node, while satisfying all security and physical constraints
+
+### Three Components of LMP
+
+```
+LMP(n, t) = Energy Component(n, t)
+           + Congestion Component(n, t)
+           + Loss Component(n, t)
+```
+
+### 1. Energy Component
+
+The energy component is the System Marginal Cost, representing the marginal cost of supplying one additional MWh under the most economical dispatch.
+
+**Calculation logic:**
+```
+Assume three generators in the system:
+  Unit A (gas): $50/MWh, ample capacity
+  Unit B (gas): $80/MWh, ample capacity
+  Unit C (peaking): $150/MWh, limited capacity
+
+When system load is low → dispatch Unit A → energy price ≈ $50/MWh
+When system load rises → Unit A fully dispatched, dispatch Unit B → energy price jumps to $80/MWh
+When system load is very high → Unit B also fully dispatched, dispatch Unit C → energy price jumps to $150/MWh
+```
+
+The energy component is **uniform across the entire grid** (when there is no congestion).
+
+### 2. Congestion Component
+
+The congestion component reflects the impact of **transmission constraints on prices**. When a transmission line reaches its capacity limit, electricity cannot flow freely from low-price areas to high-price areas, causing price divergence across regions.
+
+**Causes of congestion:**
+- Line Thermal Limit: Excessive current causes conductors to heat up
+- Voltage Limit: Voltage at a node is too low or too high
+- Stability Limit: System dynamic stability requirements
+
+**Mathematical expression of congestion cost:**
+
+```
+Let line l's transmission capacity be Cap_l
+When actual power flow P_l > Cap_l (overloaded)
+       ↓
+Shadow price (Shadow Price) λ_l > 0
+       ↓
+λ_l × marginal constraint violation → enters LMP's congestion component
+```
+
+**Intuitive understanding:**
+```
+[Low-price wind area] ---transmission line at capacity--> [High-price load area]
+
+Undeliverable power = Must start additional expensive local generation
+Extra cost = Congestion cost
+
+Low-price area LMP = System marginal cost (cheap)
+High-price area LMP = System marginal cost + Congestion premium (expensive)
+```
+
+### 3. Loss Component
+
+Electricity incurs losses during transmission (typically 2-5%). LMP compensates for these loss costs.
+
+```
+Loss component ≈ (distance from node to reference point) × unit loss cost
+
+Near generation-side node → low losses → loss component negative → LMP slightly lower
+Near load-side node → high losses → loss component positive → LMP slightly higher
+```
+
+### Numerical Example
+
+```
+LMP calculation for a specific node at a given moment:
+
+Energy component:     $45.00/MWh    (system marginal cost)
+Congestion component:+$12.50/MWh    (transmission constrained in this area)
+Loss component:       +$1.20/MWh    (transmission losses)
+─────────────────────────────────
+LMP =                 $58.70/MWh
+```
+
+---
+
+## Security Constrained Economic Dispatch (SCED)
+
+### What Is SCED?
+
+SCED (Security Constrained Economic Dispatch) is the core algorithm for calculating LMP. Every 5 minutes, the system runs SCED to compute the optimal generation schedule under all constraints, while producing LMPs for each node.
+
+### What SCED Solves
+
+```
+Minimize: Σ(generation cost_i × output_i)
+
+Subject to:
+  1. Power balance: Σ Generation = Σ Load + Total Losses
+  2. Generation capacity: output_min ≤ output ≤ output_max
+  3. Ramp limits: |Δoutput| ≤ ramp rate × Δt
+  4. Transmission constraints: |P_l| ≤ Cap_l (for each line)
+  5. Voltage constraints: V_min ≤ V_n ≤ V_max
+```
+
+### How SCED Calculates LMP
+
+SCED uses **Lagrangian Relaxation** to solve:
+
+```
+Construct Lagrangian:
+L = Σcost_i + λ₁(power balance constraint) + Σ λ_l(line capacity constraint) + ...
+
+After solving:
+  λ₁ = System energy price (same for all nodes)
+  λ_l (active constraint) = Shadow price of line l
+       → Directly enters LMP's congestion component
+```
+
+### Shadow Price
+
+The **shadow price** is key to understanding the LMP congestion component:
+
+| Condition | Shadow Price | Meaning |
+|-----------|-------------|---------|
+| Line not at capacity | λ_l = 0 | Congestion does not affect price |
+| Line at capacity (normal direction) | λ_l > 0 | Each additional 1 MW requires load reduction or expensive unit start |
+| Line at capacity (reverse direction) | λ_l < 0 | Reverse power flow can relieve congestion |
+
+**Shadow price unit:** $/MWh per MW of constraint relief
+
+---
+
+## Financial Transmission Rights (FTR)
+
+### FTR Design Logic
+
+LMP's congestion component creates a problem: **if a transmission line is frequently congested, customers on one side consistently pay high LMP — this is unfair.**
+
+**Solution: Introduce Financial Transmission Rights (FTR).**
+
+FTR is a **financial derivative** that allows market participants to hedge LMP congestion costs:
+
+```
+FTR holder: Purchases FTR from Node A to Node B
+           (capacity 1 MW, duration 1 month)
+
+If: During congestion on A→B line, LMP(A→B) spread is $20/MWh
+Then: FTR holder receives $20 × 1MW × operating hours in revenue
+
+→ Effectively locks in the value of A→B transmission rights
+→ Hedges against price volatility risk caused by transmission congestion
+```
+
+### FTR Auction and Allocation
+
+| Method | Description |
+|--------|-------------|
+| **Annual auction** | FERC requires each ISO/RTO to auction FTRs annually |
+| **Monthly auction** | FTR products refined to monthly granularity |
+| **Long-term allocation** | Some FTRs allocated to transmission customers based on historical usage |
+| **Point-to-point (P2P)** | Buyer and seller trade FTRs directly |
+
+### Congestion Revenue Rights (CRR)
+
+CAISO uses "Congestion Revenue Rights" (CRR), functionally equivalent to FTR but with slightly different names and allocation mechanisms:
+- CRRs are primarily distributed on a **first-come-first-served** and **historical allocation** basis
+- Annual/quarterly/monthly auctions serve as supplements
+
+---
+
+## Zonal Pricing vs Nodal Pricing
+
+### Two Pricing Systems
+
+```
+Zonal Pricing (Uniform Pricing)
+  ↓
+All nodes grouped into a few "zones," same price within each zone
+→ Simple, but not precise enough
+
+Nodal Pricing
+  ↓
+Each physical node has a separately calculated LMP
+→ Precisely reflects true costs, but computationally complex
+```
+
+### Key Differences
+
+| Dimension | Zonal Pricing | Nodal Pricing |
+|-----------|--------------|---------------|
+| Granularity | Low (zone average) | High (node-level) |
+| Signal accuracy | Fuzzy | Precise |
+| Computation | Small | Large (tens of thousands of nodes) |
+| Market efficiency | Lower | Higher |
+| Implementation difficulty | Simple | Complex |
+| Representative markets | Some European markets | PJM, CAISO, ISO-NE |
+
+### Hub Clustering
+
+Even nodal-pricing ISOs group related nodes into virtual "Hubs" to facilitate trading:
+
+```
+PJM Virtual Hubs:
+  - PJM-West Hub (Western)
+  - PJM-AEP Dayton Hub (Ohio region)
+  - PJM-NIllinois Hub (Chicago region)
+
+CAISO Default LAPs (Load Aggregation Points):
+  - NP15 (Northern California)
+  - SP15 (Southern California)
+  -ZP26 (Through Path 26)
+```
+
+---
+
+## LMP Implementation by ISO/RTO
+
+### PJM
+
+PJM was the pioneer of LMP, fully implementing nodal pricing in the late 1990s:
+
+| Characteristic | Description |
+|----------------|-------------|
+| Number of nodes | ~80,000+ nodes |
+| Calculation frequency | Every 5 minutes |
+| Price publication | Real-time (5-minute) and hourly averages |
+| FTR | Mature FTR market, annual/monthly auctions |
+
+**PJM LMP characteristics:**
+- Strict congestion management, shadow prices published in real time
+- Deep FTR market liquidity, mature hedging tools
+- Spread between real-time and day-ahead LMP is a market focus
+
+### CAISO
+
+CAISO has implemented LMP since 2009 (inherited from CALPX):
+
+| Characteristic | Description |
+|----------------|-------------|
+| Number of nodes | ~30,000 nodes |
+| LMP components | Energy + Congestion + Loss |
+| Ancillary services | Jointly optimized with LMP |
+| Duck curve | Significantly affects intraday LMP patterns |
+
+**CAISO LMP intraday pattern (typical sunny day):**
+
+```
+00:00-06:00  Low load → cheap gas → LMP low
+06:00-12:00  Load rises + solar comes online → LMP moderate
+12:00-14:00  Solar peak → oversupply → LMP at trough
+14:00-18:00  Solar drops sharply + load peak → LMP surges
+18:00-21:00  Peak hours → gas peaking units start → LMP highest (can reach $200-500/MWh)
+21:00-24:00  Load declines → LMP retreats
+```
+
+### ISO-NE
+
+New England has a complex market structure with an independent capacity market (Forward Capacity Market, FCM):
+
+| Characteristic | Description |
+|----------------|-------------|
+| Nodal pricing | ✓ Fully implemented |
+| Ancillary service market | Jointly optimized with LMP |
+| Capacity market | FCM operates independently from LMP |
+| Special condition | Winter natural gas pipeline bottlenecks → abnormally high winter LMP |
+
+### MISO
+
+MISO spans 15 states across diverse regions:
+
+| Challenge | Description |
+|-----------|-------------|
+| Regional differences | Low-cost Midwestern coal vs surrounding gas regions |
+| Renewable energy | Wind capacity very large (10+ GW) |
+| LMP range | Varies from $15-300/MWh |
+
+---
+
+## Nodal Pricing and Renewable Energy
+
+### Impact of Wind/Solar Output on Prices
+
+**Low marginal cost problem:**
+
+Wind and solar generation have near-zero marginal costs (as long as wind/sun is available). After large-scale renewable grid integration, the system marginal cost is suppressed:
+
+```
+During high wind/solar generation periods:
+  → System dispatches renewables first (Merit Order shifts upward)
+  → Marginal unit changes from gas to coal or even renewables
+  → Energy Component drops significantly
+
+→ Negative prices may occur: when renewables are forced to curtail
+  → Energy component becomes negative (paying people to consume electricity)
+```
+
+**Duck curve + LMP = Extreme price volatility**
+
+```
+Midday: Solar at full output + moderate load
+  → System marginal cost very low (LMP ≈ $10-20/MWh)
+  → Congestion component persists due to full transmission lines
+
+Evening ("duck neck"):
+  → Solar drops sharply by 10 GW (California ~15:00-19:00)
+  → Load surges (air conditioning + lighting)
+  → Needs 10+ GW of fast-ramping resources
+  → System marginal cost surges (LMP ≈ $150-500/MWh)
+  → Congestion component amplified by tight transmission grid
+```
+
+### Implications of LMP for Renewable Energy Investment
+
+**High LMP area = Investment signal:**
+
+```
+A region's LMP remains consistently high (>$80/MWh)
+       ↓
+Indicates: High supply cost, serious transmission congestion in this region
+       ↓
+Investment opportunities:
+  1. Build local gas peaking power plants (meet ramping needs)
+  2. Build local storage (arbitrage: charge low, discharge high)
+  3. Demand response aggregators (curtail peak load)
+  4. Expand transmission grid (relieve congestion)
+```
+
+**Negative price areas = Curtailment problem:**
+
+```
+Frequent negative prices in a region
+       ↓
+High wind/solar curtailment risk
+       ↓
+Investment signals:
+  1. Storage (charge to store, discharge at peak)
+  2. Pumped hydro (large-scale storage)
+  3. Demand response (industrial users actively respond to negative prices)
+  4. Power-to-Gas pilot projects
+```
+
+### Cross-Zonal Dispatch and LMP Smoothing
+
+When one region's LMP is very high while an adjacent region's LMP is low, cross-zonal transmission can:
+- Reduce LMP in the high-price region
+- Increase LMP in the low-price region
+- Improve overall system economic efficiency
+
+This is why **FERC Order 1000** mandates that each ISO/RTO establish cross-zonal transmission planning mechanisms.
+
+---
+
+## Limitations of LMP
+
+### 1. Computational Complexity
+
+```
+PJM: 80,000+ nodes
+CAISO: 30,000+ nodes
+Run SCED + LMP calculation every 5 minutes
+
+→ Extremely demanding on computational resources and algorithms
+→ Requires high-speed communication and real-time data systems
+```
+
+### 2. Price Volatility
+
+LMP updates every 5 minutes, and real-time markets can fluctuate dramatically:
+
+```
+PJM node real-time LMP extreme cases:
+  Normal day: $30-80/MWh
+  Summer peak: $500-1,000/MWh (lasts 30-60 minutes)
+  Emergency events: $2,000-9,000/MWh (before FERC price caps)
+```
+
+### 3. Market Power Abuse Risk
+
+Market participants controlling key transmission nodes may manipulate LMP:
+
+```
+Strategy: Hold generation capacity near a key node
+         → That node's LMP stays high
+         → Obtain excess profits
+
+Regulatory countermeasures:
+  - FERC Market Monitoring
+  - Offer Caps (capacity price caps)
+  - Must-Run Designation (key suppliers)
+```
+
+### 4. Incomplete Information
+
+SCED relies on accurate load forecasting and generation offers, but:
+- Renewable output forecasts have errors
+- Load forecasts have deviations
+- Market participants may strategically bid
+
+→ Causes LMP to deviate from true marginal cost
+
+---
+
+## Operational Example of Nodal Pricing
+
+### A Complete Clearing Cycle
+
+```
+T-1 13:00  CAISO runs day-ahead SCUC + SCED
+           → Generates next-day 24-hour LMP curve
+           → Publishes day-ahead prices for all nodes
+
+T 14:55   CAISO runs real-time SCED (every 5 minutes)
+           → Current dispatch window: T+5min to T+10min
+           → Based on latest load/generation/transmission data
+           → Solves optimal generation schedule
+           → Calculates real-time LMP for each node
+
+T 15:00   Publishes real-time LMP for Node P:
+           Energy component $48.30/MWh
+           Congestion component $7.20/MWh
+           Loss component $0.95/MWh
+           ─────────────────────
+           LMP = $56.45/MWh
+
+T+1 Day   Monthly settlement:
+           Buyer: Settled at LMP × actual load
+           Seller: Settled at LMP × actual generation
+           FTR holder: Receives congestion spread revenue
+```
+
+---
+
+## Related Concepts
+
+- **LMP:** Locational Marginal Pricing
+- **SCED:** Security Constrained Economic Dispatch
+- **SCUC:** Security Constrained Unit Commitment
+- **FTR:** Financial Transmission Right
+- **CRR:** Congestion Revenue Right (CAISO terminology)
+- **Shadow Price:** The marginal value of a constraint
+- **Congestion:** Transmission congestion
+- **Loss:** Transmission losses
+- **Merit Order:** Generation dispatch priority (sorted by marginal cost, low to high)
+- **Hub:** Virtual hub, a price reference point after grouping multiple nodes
+- **Bid/Offer:** Bid/offer
+
+## References
+
+- PJM Manual for Locational Marginal Pricing (2024)
+- CAISO Tariff — Appendix N (LMP Methodology)
+- FERC Order 2000 (Establishing RTOs)
+- FERC Order 888/889 (Open Access Tariff)
+- PSE&G Energy Economics: LMP Tutorial
+- MIT Energy Initiative: "Why Locational Marginal Pricing?"
+
+## Related Pages
+
+- [[ancillary-services-market]] - Ancillary Services Market: mechanism for joint optimization of ancillary services and LMP
+- [[grid-dispatch-balancing]] - Grid Dispatch and Balancing Areas: SCED and ACE dispatch execution layer
+- [[electricity-markets-day-ahead-real-time]] - Electricity Market Types: day-ahead and real-time market LMP applications
+- [[interconnection-renewable-comparison]] - Three Major Interconnections Comparison: LMP implementation differences across ISOs/RTOs
+
+---
+*Last updated: 2026-05-07*
+*Sources: PJM, CAISO, ISO-NE, MISO, FERC, MIT*

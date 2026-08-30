@@ -156,6 +156,168 @@ ERCOT对天然气电厂有严格的**Firm Fuel Supply**要求：
 - ERCOT长期负荷预测：2026年4月15日发布
 
 ---
-
-*最后更新：2026-04-17*
+*最后更新：2026-05-07*
 *来源：ERCOT官网、PUCT、ERCOT Trending Topics、NPRR系列文件*
+
+---
+
+# English Version
+
+# ERCOT Nuclear and Natural Gas Generation Interconnection & Market Policy
+
+## Overview
+
+ERCOT (Electric Reliability Council of Texas) is the Independent System Operator (ISO) for approximately 90% of Texas's electricity load. The Texas grid uses natural gas and renewable energy as its primary generation sources; nuclear power accounts for a relatively small share but plays an important baseload role.
+
+## Texas Generation Mix
+
+### Generation Type Distribution (as of 2026)
+
+| Generation Type | Installed Capacity | Notes |
+|---------------|-------------------|-------|
+| Natural Gas | ~55,000 MW | Primary peaking and baseload |
+| Wind | ~40,000+ MW | ERCOT's largest renewable |
+| Solar | ~20,000+ MW | Rapidly growing |
+| Nuclear | ~2,700 MW | South Texas Project only |
+| Battery Storage | ~17,000+ MW | Rapid growth after RTC+B launch |
+
+### Data Sources
+- ERCOT grid: 55,000+ miles of transmission lines, 1,460+ generation units
+- Covers 90% of Texas electricity load, serving 27+ million customers
+
+---
+
+## Nuclear Power Policy
+
+### Current Status
+
+ERCOT currently has only **one** operating commercial nuclear plant:
+- **South Texas Project (STP)**: Located near Bay City, Texas
+  - 2 units, total installed capacity ~2,700 MW
+  - Jointly owned by NRG Energy and Austin Energy
+
+### Nuclear Market Treatment
+
+1. **No Special Fuel Supply Requirements**
+   - Nuclear fuel supply is highly stable, no Firm Fuel Supply contract required like natural gas plants
+   - Nuclear generators do not need to participate in PUCT's fuel supply certification process
+
+2. **Baseload Resource Positioning**
+   - Nuclear is treated as a highly dispatchable baseload power source
+   - Capacity factor typically >90%
+   - No special pricing mechanism in ERCOT markets
+
+3. **Interconnection Process**
+   - Follows standard ERCOT Generator Interconnection Process (GIP)
+   - No special nuclear fast-track (except for a few small modular reactor SMR pilot projects)
+
+### New Nuclear Development
+
+- **Small Modular Reactors (SMR)**: No commercial SMRs operating in Texas yet
+- Texas legislature is discussing SMR interconnection policy, but no clear framework has formed
+- STP is evaluating expansion plans for Units 3 and 4 (AP1000 technology)
+
+---
+
+## Natural Gas Generation Policy
+
+### Fuel Supply Assurance Requirements
+
+ERCOT has strict **Firm Fuel Supply** requirements for natural gas plants:
+
+#### NPRR1275 (Latest Update)
+- **Expanded Qualifying Pipeline Definition**
+- Purpose: Lower natural gas supplier entry barriers and strengthen fuel supply assurance for gas generation
+- Scope: Phase 3 Firm Fuel Supply Service
+
+#### Key Requirements
+1. **Firm Gas Transportation Contract**: Natural gas plants must hold reliable pipeline transportation contracts
+2. **Annual Certification**: Must submit annual fuel supply certification to PUCT
+3. **Backup Fuel**: Some plants also need backup fuel (e.g., LNG) capability
+
+### Market Rule Updates (NPRR Series)
+
+| NPRR Number | Name | Key Content |
+|------------|------|-----------|
+| NPRR1275 | Expansion of Qualifying Pipeline Definition | Expanded natural gas pipeline definition |
+| NPRR1278 | Advanced Grid Support Service | Established advanced grid support service as ancillary service |
+| NPRR1309 | Dispatchable Reliability Reserve Service | Launched dispatchable reliability reserve service |
+| NPRR1310 | DRRS Plus Energy Storage | Energy storage participation in dispatchable reliability reserve |
+| NPRR1214 | Reliability Deployment Price Adder | Reliability deployment price adder corrections |
+
+### Natural Gas Plant Participation in Ancillary Services
+
+Natural gas plants can participate in these ancillary service types:
+- **Responsive Reserve**: Responsive reserve, dispatchable within 15 minutes
+- **Non-Spinning Reserve**: Non-spinning reserve, requires cold start
+- **Regulation Up/Down**: Frequency regulation service
+- **Voltage Support**: Voltage support service
+
+### Reliability Must Run (RMR)
+
+When market resources are insufficient, ERCOT can require specific natural gas plants to continue operating:
+- ERCOT signs RMR agreements with plants
+- Compensation prices are approved by PUCT
+- Primarily for aging units or strategically located plants
+
+---
+
+## Key Policy Developments (2025-2026)
+
+### 1. Temporary Reliability Solutions
+- **Published**: June 5, 2025
+- **Background**: Addressing reliability gaps from retiring aging generation units
+- **Measures**: Allows specific natural gas units to continue operating during transition period
+
+### 2. Real-Time Co-optimization Plus Batteries (RTC+B)
+- **Launch date**: December 5, 2025
+- **Impact**: Although primarily targeting energy storage, changed natural gas unit dispatch priority
+- **Benefit**: Expected to save over $1 billion annually
+
+### 3. Ancillary Services Market Update
+- **Latest update**: December 29, 2025
+- **Content**: Ancillary services market demand calculation methods, energy storage participation rules, etc.
+
+### 4. ERCOT Long-Term Load Forecast (2026-2032)
+- **Published**: April 15, 2026
+- **Forecast**: Load demand to reach 367,790 MW by 2032
+- **Comparison**: 2023 record load was 85,508 MW (summer peak)
+- **Background**: Rapid growth in data centers, cryptocurrency mining, industrial, and oil & gas demand
+- **Impact**: Will drive more natural gas combined-cycle plant construction
+
+---
+
+## Natural Gas vs. Nuclear Comparison
+
+| Dimension | Natural Gas | Nuclear |
+|-----------|-----------|---------|
+| **Fuel Stability** | Requires Firm Supply contract, subject to pipeline constraints | Stable nuclear fuel supply |
+| **Dispatch Flexibility** | High, can start/stop quickly | Low, typically baseload |
+| **Carbon Emissions** | Yes (but lower than coal) | Very low |
+| **Ancillary Services Participation** | Full participation | Limited (primarily baseload) |
+| **Interconnection Process** | Standard GIP process | Standard GIP (+ nuclear safety approval) |
+| **Market Positioning** | Baseload + peaking | Baseload |
+| **Policy Support** | No carbon tax in Texas, support for continued operation | Federal support, complex state-level attitude |
+
+---
+
+## Related Concepts
+
+- [[ancillary-services-market]] - Ancillary Services Market: Types of ancillary services natural gas and nuclear can participate in
+- [[electricity-markets-day-ahead-real-time]] - ERCOT Electricity Market Structure: Day-ahead vs. real-time markets
+- [[ercot-rtc-b-market]] - ERCOT Energy Storage Market Mechanism: Impact of RTC+B on dispatch of various resources
+- [[power-generation]] - Power Generation Principles: Technical foundations of natural gas and nuclear
+- [[interconnection-renewable-comparison]] - U.S. Three Major Interconnections Comparison: Differences between ERCOT and Eastern/Western grids
+
+## Data Sources
+
+- ERCOT official website: ercot.com
+- ERCOT market rules page: ercot.com/mktrules
+- ERCOT news releases: ercot.com/news/releases
+- PUCT (Public Utility Commission of Texas): puc.texas.gov
+- ERCOT Trending Topics (Ancillary Services): Updated December 29, 2025
+- ERCOT Long-Term Load Forecast: Published April 15, 2026
+
+---
+*Last updated: 2026-05-07*
+*Sources: ERCOT official website, PUCT, ERCOT Trending Topics, NPRR series documents*

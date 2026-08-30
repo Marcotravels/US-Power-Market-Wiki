@@ -156,6 +156,168 @@ RTC+B（Real-Time Co-optimization Plus Batteries）是ERCOT电力市场自2010�
 - [[interconnection-renewable-comparison]] - 三大互联系统对比：ERCOT 与其他系统的储能政策差异
 
 ---
-
-*最后更新：2026-04-15*
+*最后更新：2026-05-07*
 *来源：ERCOT, FERC, SEERC, EIA*
+
+---
+
+# English Version
+
+# ERCOT Real-Time Co-optimization Plus Batteries (RTC+B) Market Mechanism
+
+## Overview
+
+RTC+B (Real-Time Co-optimization Plus Batteries) is the most significant upgrade to the ERCOT electricity market since the 2010 Real-Time Nodal market design, officially launched on **December 5, 2025**. This mechanism allows energy storage systems to simultaneously participate in the energy market and the ancillary services market, achieving real-time co-optimized dispatch.
+
+## Background
+
+### Development History
+- **2019:** PUCT directed ERCOT to conduct a cost-benefit assessment of Real-Time Co-optimization (RTC)
+- **Assessment results:** Found that RTC could bring significant market efficiency and reliability improvements
+- **Market expansion:** As Battery Energy Storage Resources (BESRs) grew rapidly in the ERCOT market, the RTC project was expanded to RTC+B
+- **December 5, 2025:** RTC+B officially launched
+
+### Design Objectives
+1. Improve real-time procurement efficiency
+2. Optimize ancillary services procurement and management
+3. Improve energy storage modeling and dispatch
+4. Reduce manual operations and dispatcher decision burden
+
+## Core Mechanism
+
+### 1. Real-Time Co-optimization
+
+**Traditional model:**
+- Energy market and ancillary services market operate independently
+- Energy storage needs to compete in these two markets separately
+- May lead to inefficient resource allocation
+
+**RTC+B model:**
+- Simultaneously optimizes energy and ancillary services procurement in the real-time market
+- System can consider all available capabilities of energy storage at once
+- Automatically finds the optimal resource combination
+
+### 2. Single Device Modeling for Energy Storage
+
+**Key improvement:**
+- Models battery energy storage systems as a single device
+- Simultaneously considers the battery's State of Charge (SoC)
+- More effectively dispatches stored energy
+
+**Advantages:**
+- More accurate system state awareness
+- More optimized dispatch decisions
+- Better reliability assurance
+
+### 3. Ancillary Services Market Integration
+
+Ancillary services energy storage can provide:
+- **Regulation:** Fast response to frequency changes
+- **Spinning Reserve:** Backup capacity
+- **Non-Spinning Reserve:** Fast-start backup
+- **Reactive Power:** Voltage support
+
+## Market Benefits
+
+### Economic Benefits
+- **Estimated annual savings:** Over $1 billion
+- **Beneficiaries:** All Texas electricity consumers
+
+### System Benefits
+1. **More timely ancillary services procurement and management**
+2. **Better transmission congestion management** (using more types of resources)
+3. **Reduced manual operations and dispatcher decisions**
+4. **Replaced inefficient supplemental reserve market**
+
+### Reliability Benefits
+- More flexible system dispatch
+- Better resource utilization
+- Improved battery energy storage modeling
+
+## Participating Entities
+
+### Market Participants
+- Battery energy storage asset owners
+- Energy storage developers
+- Power marketers
+
+### Preparation Work
+- Established RTC+B Task Force (RTCBTF)
+- Close collaboration with stakeholders
+- Comprehensive testing and market trials
+- Published training videos explaining business process changes
+
+## Technical Details
+
+### Market Scale
+- As of December 2025, ERCOT grid:
+  - 55,000+ miles of transmission lines
+  - 1,460+ generation units
+  - 27 million+ customers
+  - 90% of Texas electricity load
+
+### ERCOT Long-Term Load Forecast (2026-2032)
+- **Published:** April 15, 2026 (preliminary forecast)
+- **2032 forecast:** 367,790 MW
+- **2023 record:** 85,508 MW (summer peak)
+- **Drivers:** Data centers, cryptocurrency mining, industrial growth, oil & gas demand
+
+### New Market Rules (NPRR Series)
+- **NPRR1275:** Firm Fuel Supply Service Phase 3 (expanded Qualifying Pipeline definition)
+- **NPRR1278:** Advanced Grid Support Service (established as ancillary service)
+- **NPRR1309/1310:** Dispatchable Reliability Reserve Service
+
+### Energy Storage Participation
+- December 2025 real-time data shows:
+  - Solar: 0 MW (nighttime)
+  - Wind: 18,442 MW
+  - Storage discharge: -1,630 MW (negative indicates discharge)
+  - Storage installed capacity: 17,934 MW
+
+## Comparison with Other Markets
+
+| Feature | ERCOT RTC+B | CAISO | PJM |
+|---------|-------------|-------|-----|
+| **Storage participation in energy market** | ✓ Real-time co-optimized | ✓ | ✓ |
+| **Storage participation in ancillary services** | ✓ Real-time co-optimized | ✓ | Developing |
+| **Storage as single device modeling** | ✓ | ✓ | Developing |
+| **Real-time co-optimization** | ✓ | Partial | Partial |
+
+## Implications for Solar + Storage
+
+### Advantages
+1. **Better economic returns:** Energy storage can profit from both markets simultaneously
+2. **More flexible dispatch:** Optimize charge/discharge strategies based on market prices and system needs
+3. **Higher system value:** Help solve photovoltaic intermittency problems
+
+### Business Model Changes
+- **Solar Plus Storage projects:** Can participate in both energy and ancillary services markets simultaneously
+- **Diversified revenue sources:** No longer dependent solely on energy arbitrage
+
+## Future Development
+
+### PUCT Project Number
+- **Project No. 48540:** "Review of Real-Time Co-optimization in the ERCOT Market"
+
+### Follow-up Plans
+- Continue discussing priority initiatives through the Technical Advisory Committee (TAC)
+- Further improve market design and rules
+
+## Related Concepts
+
+- **Real-Time Nodal Market:** ERCOT's market model
+- **LMP (Locational Marginal Pricing):** Locational Marginal Pricing
+- **Ancillary Services:** Ancillary services
+- **State of Charge (SoC):** Battery State of Charge
+- **BESR (Battery Energy Storage Resource):** Battery Energy Storage Resource
+- **PUCT:** Public Utility Commission of Texas
+
+## Related Pages
+
+- [[ancillary-services-market]] - Ancillary Services Market: Types of ancillary services energy storage can participate in
+- [[electricity-markets-day-ahead-real-time]] - Electricity Market Types: ERCOT's uniqueness without a day-ahead market
+- [[interconnection-renewable-comparison]] - Three Major Interconnections Comparison: ERCOT's energy storage policy differences from other systems
+
+---
+*Last updated: 2026-05-07*
+*Sources: ERCOT, FERC, SEERC, EIA*

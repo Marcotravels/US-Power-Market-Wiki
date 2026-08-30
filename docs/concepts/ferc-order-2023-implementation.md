@@ -134,6 +134,146 @@ FERC Order 2023（正式名称：Improvements to Generator Interconnection Proce
 - 各RTO/ISO实施页面
 
 ---
-
-*最后更新：2025-04-16*
+*最后更新：2026-05-07*
 *来源：FERC, DOE, EIA, 各RTO/ISO*
+
+---
+
+# English Version
+
+# FERC Order 2023: Implementation Details
+
+## Overview
+
+FERC Order 2023 (formally: Improvements to Generator Interconnection Procedures and Agreements) is a major regulation issued by the Federal Energy Regulatory Commission on July 28, 2023, aimed at comprehensively reforming the large-scale renewable energy and energy storage interconnection process for the U.S. power system. This order is a key policy tool for the U.S. power grid's transition to clean energy.
+
+**Issuing agency:** FERC (Federal Energy Regulatory Commission)
+**Issue date:** July 28, 2023
+**Effective date:** Phased implementation; some provisions took effect in 2024
+
+## Core Reform Contents
+
+### 1. Clear Interconnection Standards for Energy Storage
+
+**Historical background:**
+- Old rules were primarily designed for traditional fossil fuel power plants
+- The unique characteristics of energy storage systems (BESS) were not fully considered
+
+**New provisions in Order 2023:**
+- First clear interconnection standards for energy storage systems at the federal level
+- Energy storage can participate in both "charging" and "discharging" modes
+- Requires Transmission Providers to develop dedicated energy storage interconnection procedures
+
+### 2. Phased Study Process
+
+**Phase 1: Feasibility Study**
+- Assess the project's preliminary impact on the power grid
+- Estimate preliminary interconnection costs
+- Timeline: Typically completed 60-90 days after application submission
+
+**Phase 2: System Impact Study**
+- Detailed assessment of impacts on the transmission network
+- Identify necessary network upgrades
+- Timeline: Typically completed 60-120 days after feasibility study
+
+**Phase 3: Facility Study**
+- Determine specific design requirements for generation and interconnection facilities
+- Detailed cost estimates
+- Timeline: Typically completed 60-90 days after system impact study
+
+### 3. First-Come, First-Served Principle
+
+**Core principles:**
+- Interconnection applications processed in order of submission
+- Prevent "queuing" behavior (speculative projects)
+- Improve queue efficiency
+
+### 4. Clear Timeline Requirements
+
+| Stage | Timeline Requirement |
+|-------|---------------------|
+| Transmission Provider Review | Complete feasibility study within 150 days of receiving complete application |
+| Sign Interconnection Agreement | Sign within 90 days of interconnection approval |
+| Project Commissioning | Typically completed 2-3 years after agreement signing |
+
+### 5. Improved Cost Allocation Mechanism
+
+**Network upgrade cost allocation:**
+- Clarified cost-sharing between project developers and grid companies
+- Reduced uncertainty for project developers
+- Promoted more efficient grid planning
+
+## Scope of Application
+
+### Applicable Objects
+- Large generating facilities with capacity ≥ 20 MW
+- Energy storage systems (with storage capacity ≥ 100 kWh)
+- Hybrid projects (e.g., Solar Plus Storage)
+
+### Not Applicable
+- Small distributed generation (typically governed by state regulations)
+- Upgrades to existing facilities
+- Projects with capacity < 20 MW (simplified process applies)
+
+## Interaction with State Policies
+
+### Federal-State Relationship
+- FERC is responsible for interconnection rules for interstate transmission grids
+- State public utility commissions are responsible for distribution-level interconnection
+- Some states have requirements stricter than federal requirements
+
+### California
+- CPUC has additional energy storage procurement requirements
+- CAISO implements stricter interconnection standards than federal requirements
+- California's RPS targets are aligned with federal policy
+
+### Texas (ERCOT)
+- ERCOT is an independent system and not directly under FERC jurisdiction
+- However, ERCOT voluntarily adopts some FERC standards
+- Texas energy storage is primarily market-driven
+
+## Implementation Progress
+
+### Transmission Provider Compliance
+- Each RTO/ISO needs to revise its interconnection rules
+- Phased implementation starting in 2024
+- FERC oversees compliance progress
+
+### Challenges and Criticism
+- Interconnection queues remain very long (~2,000 GW of projects waiting nationwide)
+- Implementation progress is slower than expected
+- Cost escalation issues persist
+
+## Implications for Solar + Storage Projects
+
+### Positive Impacts
+1. **Clearer rules:** Energy storage interconnection now has clear standards
+2. **Streamlined process:** Phased review improves predictability
+3. **Time certainty:** Clear timeline requirements
+4. **Cost transparency:** Improved cost allocation mechanism
+
+### Issues Still to Resolve
+- High costs of transmission network upgrades
+- Lag in grid planning
+- Supply chain and permitting challenges
+
+## Key Terms
+
+- **LGIA (Large Generator Interconnection Agreement):** Large Generator Interconnection Agreement
+- **Interconnection Queue:** Queue of projects waiting to interconnect
+- **Network Upgrade:** Upgrades to the transmission network required for interconnection
+- **Facilities Study:** Detailed study of facility design and costs
+- **System Impact Study:** Study of impacts on the transmission system
+- **Feasibility Study:** Preliminary assessment of interconnection feasibility
+- **Transmission Provider:** Entity providing transmission service
+- **RTO/ISO:** Regional Transmission Organization / Independent System Operator
+
+## References
+
+- FERC Order 2023: https://www.ferc.gov/ferc-order-2023
+- FERC News Release: https://www.ferc.gov/news/headlines.asp
+- RTO/ISO implementation pages
+
+---
+*Last updated: 2026-05-07*
+*Sources: FERC, DOE, EIA, various RTOs/ISOs*

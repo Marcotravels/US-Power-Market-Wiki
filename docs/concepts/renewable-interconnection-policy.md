@@ -90,6 +90,102 @@
 - NREL Solar Systems Integration: https://www.nrel.gov/solar/
 
 ---
-
-*最后更新：2025-04-16*
+*最后更新：2026-05-07*
 *来源：FERC, DOE, CPUC, ERCOT, NREL*
+
+---
+
+# English Version
+
+# Overview of Renewable Energy Interconnection Policy
+
+## Core Concepts
+
+Renewable Energy Interconnection refers to the process of connecting solar, wind, and other renewable energy generation facilities to the electrical power grid. This process involves multiple dimensions including technical standards, market rules, and administrative procedures.
+
+## U.S. Renewable Energy Interconnection Policy Framework
+
+### Federal Level
+
+#### FERC Order 2023 (Key Regulation)
+- **Issuing agency:** Federal Energy Regulatory Commission (FERC)
+- **Core content:** New generation of interconnection rules issued in 2023, aimed at streamlining large-scale renewable energy interconnection processes
+- **Key reforms:**
+  - First clear interconnection standards for energy storage systems (ESS) at the federal level
+  - Established phased study process for interconnection review
+  - Set clear interconnection timeline requirements
+  - Required transmission providers to process interconnection applications on a "first-come, first-served" basis
+
+#### Key Federal Agencies
+- **FERC:** Sets transmission grid interconnection rules and market regulations
+- **DOE:** Supports photovoltaic R&D and systems integration research through the Solar Energy Technologies Office (SETO)
+- **NREL (National Renewable Energy Laboratory):** Provides technical research and analysis support
+
+### State Level
+
+#### California
+- **RPS targets:** 60% by 2030, 100% clean energy by 2045
+- **Regulatory agencies:** California Public Utilities Commission (CPUC), California Energy Commission (CEC)
+- **Characteristics:** Has independent energy storage interconnection policies and community solar programs
+
+#### Texas
+- **Grid operator:** ERCOT (Electric Reliability Council of Texas)
+- **Characteristics:**
+  - The only independent power market in the U.S. (no physical connection to the other two major interconnections)
+  - Real-Time Co-optimization Plus Batteries (RTC+B) launched December 2025
+  - Relatively simplified energy storage interconnection process
+
+## Interconnection Type Comparison
+
+### Utility-Scale Interconnection
+- Voltage level: Above 69kV
+- Process: Requires complete feasibility study, system impact study, and facility study
+- Typical scale: 100 MW and above
+
+### Distributed Generation Interconnection
+- Voltage level: Below 69kV
+- Process: Simplified review process
+- Typical scale: 1-20 MW
+
+## Interconnection Queue Problems
+
+### Core Challenges
+- **Application backlog:** Total capacity of projects in interconnection queues nationwide exceeds 2,000 GW
+- **Time delays:** Average 5-7 years from application to interconnection
+- **Cost uncertainty:** Costs for upgrading transmission networks often exceed expectations
+
+### Policy Responses
+- FERC Order 2023 aims to shorten processing times through standardized processes
+- Multiple states implement "fast-track" project processes
+- Promoting "plug-and-play" distributed system standards
+
+## Solar Plus Storage
+
+### Technical Advantages
+- **Smoothing output:** Energy storage systems can compensate for the intermittency of photovoltaic generation
+- **Peak shaving services:** Discharge during peak periods, reducing dependence on peaking power plants
+- **Capacity value:** Meets grid capacity needs
+
+### Policy Support
+- ITC (Investment Tax Credit) extended to energy storage
+- California CPUC's energy storage procurement mandates
+- ERCOT market reforms support energy storage participation in energy and ancillary services markets
+
+## Related Concepts
+
+- **Interconnection Queue:** Waiting list of projects pending interconnection
+- **Large Generator Interconnection Agreement (LGIA):** Agreement for interconnecting large generation facilities
+- **Facility Study:** Technical feasibility study before interconnection
+- **Network Upgrade:** Transmission grid modifications required to meet interconnection needs
+
+## References
+
+- FERC Order 2023: https://www.ferc.gov/ferc-order-2023
+- DOE Solar Energy Technologies Office: https://www.energy.gov/cmei/systems/solar-energy-technologies-office
+- California CPUC RPS: https://www.cpuc.ca.gov/RPS/
+- ERCOT: https://www.ercot.com
+- NREL Solar Systems Integration: https://www.nrel.gov/solar/
+
+---
+*Last updated: 2026-05-07*
+*Sources: FERC, DOE, CPUC, ERCOT, NREL*

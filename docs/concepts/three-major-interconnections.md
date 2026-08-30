@@ -1,7 +1,7 @@
 ---
 title: 美国三大互联系统
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-05-07
 type: concept
 tags: [interconnection, grid-basics]
 sources: [raw/articles/eia-delivery-to-consumers.md]
@@ -26,7 +26,7 @@ sources: [raw/articles/eia-delivery-to-consumers.md]
 ## 3. ERCOT (Electric Reliability Council of Texas)
 
 - **覆盖范围**: 德克萨斯州大部分地区（不包括Panhandle和东部小部分）
-- **特点**: 
+- **特点**:
   - 独立于东部和西部系统
   - 是美国唯一不受联邦监管的互联系统
   - 平衡机构、互联系统和区域输电组织为同一实体
@@ -38,3 +38,39 @@ sources: [raw/articles/eia-delivery-to-consumers.md]
 1. **经济性**: 共享大型发电设施，降低成本
 2. **可靠性**: 提供多条电力流动路径，冗余设计
 3. **峰值管理**: 互相调用备用容量，平滑需求峰值
+
+---
+
+# English Version
+
+## The Three Major U.S. Interconnections
+
+The contiguous U.S. power grid is divided into three major interconnections that operate largely independently, with minimal power transfer between them.
+
+## 1. Eastern Interconnection
+
+- **Coverage**: East of the Rocky Mountains + part of the Texas Panhandle
+- **Characteristics**: The largest U.S. interconnection, covering the most densely populated regions
+- **International connections**: Interconnected with the Canadian power grid
+
+## 2. Western Interconnection
+
+- **Coverage**: From the Rocky Mountains west to the Pacific coast
+- **Characteristics**: Covers the western U.S. states
+- **International connections**: Interconnected with the Canadian power grid
+
+## 3. ERCOT (Electric Reliability Council of Texas)
+
+- **Coverage**: Most of Texas (excluding the Panhandle and small eastern portion)
+- **Characteristics**:
+  - Independent from Eastern and Western systems
+  - The only U.S. interconnection not subject to federal regulation
+  - Balancing authority, interconnection, and RTO are the same entity
+  - Not connected to Eastern/Western interconnections (linked by a limited number of DC ties)
+- **Why**: ERCOT chose to operate its own grid to avoid interstate regulation, but this makes it more vulnerable to power shortages during extreme weather (e.g., Winter Storm Uri, February 2021)
+
+## Why Do Interconnections Exist?
+
+1. **Economics**: Sharing large generation facilities reduces costs
+2. **Reliability**: Multiple power flow paths and redundant design
+3. **Peak management**: Sharing reserve capacity smooths demand peaks

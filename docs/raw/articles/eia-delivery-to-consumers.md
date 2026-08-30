@@ -41,3 +41,51 @@ URL: https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php
 ## 平衡机构 (Balancing Authorities)
 
 三大互联系统描述了电网的物理结构。区域内电力系统的日常运营由平衡机构管理，它们确保电力供应始终与需求匹配。大多数平衡机构是承担其部分电力系统平衡责任的电力公用事业公司。
+
+---
+
+# English Version
+
+## How Electricity Is Delivered to Consumers
+
+Source: EIA - Energy Explained
+URL: https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php
+
+## The Electric Power Grid
+
+After electricity is generated at power plants, it is delivered to consumers through a complex system called the power grid. The grid includes substations, transformers, and power lines that connect electricity producers and consumers. Most local grids are interconnected, forming larger and more reliable networks that ensure there is always enough power to meet demand.
+
+In the United States, the power grid consists of thousands of miles of high-voltage power lines and millions of miles of low-voltage power lines. This network connects thousands of power plants and hundreds of millions of electricity customers nationwide.
+
+## Sources of Electricity and Types of Suppliers
+
+The sources of purchased electricity vary. Some electric utilities generate their own electricity at power plants and sell it. Other utilities purchase electricity from different utility companies, power marketers, independent power producers, or wholesale markets.
+
+The way you purchase electricity varies by region. Companies that sell electricity may be:
+- Municipal electric utilities (non-profit, owned by city or local government)
+- Electric cooperatives (member-owned)
+- Investor-owned utilities (private for-profit companies)
+
+## Electricity Delivery
+
+Power plants generate electricity, which is sent to customers through transmission and distribution lines.
+
+**High-voltage transmission lines** - mounted between tall towers, carrying electricity over long distances. Higher voltage makes long-distance transmission more efficient and less expensive.
+
+**Distribution lines** - carry lower-voltage electricity more safely to homes and businesses.
+
+**Transformers** - play a key role in substations. They step up (increase) or step down (decrease) voltage to accommodate different stages from power plants to end users.
+
+## The Three Major Interconnections
+
+The contiguous U.S. power grid has three major interconnections that operate largely independently, with minimal power transfer between them:
+
+1. **Eastern Interconnection** - covers the area east of the Rocky Mountains and part of the Texas Panhandle
+2. **Western Interconnection** - covers the area from the Rocky Mountains west to the Pacific
+3. **ERCOT (Electric Reliability Council of Texas)** - covers most of Texas
+
+The Eastern and Western interconnections are also connected to the Canadian power grid. This network structure makes the power grid more reliable by providing multiple power flow paths and allows generators to supply electricity to multiple regions. This redundancy helps prevent widespread blackouts when a transmission line or power plant fails.
+
+## Balancing Authorities
+
+The three major interconnections describe the physical structure of the power grid. The day-to-day operation of regional power systems is managed by balancing authorities, which ensure that power supply always matches demand. Most balancing authorities are electric utilities that assume responsibility for balancing part of their power systems.

@@ -1,7 +1,5 @@
 # 电力市场类型：日前市场与实时市场
 
-> **English:** Electricity Market Types: Day-Ahead vs Real-Time Markets
-
 ## 概述
 
 电力市场分为多个时间维度的交易类型，其中最重要的是**日前市场（Day-Ahead Market）** 和**实时市场（Real-Time Market）**。这两个市场共同构成了电力批发市场的核心，帮助确保电力的可靠供应和价格发现。
@@ -166,7 +164,7 @@ LMP = 能量价格 + 阻塞成本 + 损耗成本
 
 ### ERCOT的特殊性
 
-**ERCOT是唯一没有日前市场的主要ISO/RTO）**
+**ERCOT是唯一没有日前市场的主要ISO/RTO**
 
 原因：
 - ERCOT是"可靠性"市场，不是"财务"市场
@@ -228,6 +226,240 @@ LMP = 能量价格 + 阻塞成本 + 损耗成本
 - [[ercot-rtc-b-market]] - ERCOT RTC+B：ERCOT 的实时容量市场机制
 
 ---
-
-*最后更新：2026-04-15*
+*最后更新：2026-05-07*
 *来源：EIA, CAISO, PJM, ERCOT, MISO等ISO/RTO官网*
+
+---
+
+# English Version
+
+## Electricity Market Types: Day-Ahead vs Real-Time Markets
+
+## Overview
+
+Electricity markets are divided into multiple time-dimension trading types, the most important being the **Day-Ahead Market** and **Real-Time Market**. Together, these two markets form the core of the wholesale electricity market, helping ensure reliable supply and price discovery.
+
+## Why Multiple Markets?
+
+Electricity has several unique properties that make a multi-market structure necessary:
+
+1. **Electricity cannot be stored in large quantities** — generation and consumption must be balanced in real time
+2. **Transmission has physical limits** — transmission capacity is constrained
+3. **Demand fluctuates significantly** — varying with time, weather, and seasons
+4. **Supply side is diverse** — thermal, nuclear, wind, solar, each with different characteristics
+
+## Day-Ahead Market
+
+### What Is the Day-Ahead Market?
+
+The day-ahead market is the first stage of the wholesale electricity market, where participants trade electricity one day before actual delivery. After market clearing, the next day's generation schedule and day-ahead prices are determined.
+
+### Day-Ahead Market Timeline
+
+| Time | Event |
+|------|-------|
+| T-1 day 12:00 | Participants submit next-day bids and offers |
+| T-1 day 13:00-16:00 | Market clearing |
+| T-1 day 16:00+ | Next-day 24-hour generation schedule and DA prices published |
+| T day | Execute generation according to day-ahead schedule |
+
+### Functions of the Day-Ahead Market
+
+1. **Price Discovery**
+   - Establishes "expected prices" for the next day
+   - Provides price signals to market participants
+
+2. **Risk Management**
+   - Participants can lock in next-day prices
+   - Reduces real-time price volatility risk
+
+3. **Unit Commitment**
+   - Determines which generators need to start up
+   - Arranges reserve capacity in advance
+
+4. **Transmission Scheduling**
+   - Routes transmission based on day-ahead prices
+   - Avoids transmission congestion
+
+### Day-Ahead Clearing
+
+Market clearing considers these constraints:
+
+- **Generation constraints:** Unit min/max output, ramp rates, start/stop times
+- **Transmission constraints:** Line thermal limits, voltage limits
+- **System constraints:** Reserve requirements, frequency response requirements
+
+### Day-Ahead Prices (LMP)
+
+**Locational Marginal Pricing (LMP)** is the core pricing mechanism of the day-ahead market.
+
+**Three components of LMP:**
+
+```
+LMP = Energy Component + Congestion Component + Loss Component
+```
+
+| Component | Description |
+|-----------|-------------|
+| Energy Component | Marginal generation cost |
+| Congestion Component | Additional cost due to transmission congestion |
+| Loss Component | Additional cost due to transmission losses |
+
+## Real-Time Market
+
+### What Is the Real-Time Market?
+
+The real-time market trades at the moment of actual electricity delivery, adjusting deviations between day-ahead plans and actual operations. In major U.S. ISOs/RTOs, the real-time market clears every 5 minutes.
+
+### Real-Time Market Timeline
+
+| Time | Event |
+|------|-------|
+| T day 0:00-24:00 | Real-time operation, clears every 5 minutes |
+| Real time | Adjust based on actual load, generation, transmission |
+| T+1 | Settle real-time deviations and prices |
+
+### Functions of the Real-Time Market
+
+1. **Real-Time Balancing**
+   - Adjusts generation to match actual load
+   - Maintains system frequency at 60Hz
+
+2. **Deviation Settlement**
+   - Handles deviations between day-ahead plan and actual
+   - Settles at real-time prices
+
+3. **Ancillary Services**
+   - Regulation service
+   - Spinning Reserve
+   - Load Following
+
+4. **Emergency Response**
+   - Handles unexpected generator outages
+   - Responds to sudden load changes
+
+### Real-Time Prices
+
+Real-time prices are based on **real-time system marginal cost**, typically more volatile than day-ahead prices.
+
+**Factors affecting real-time prices:**
+- Deviation of actual load from forecast
+- Actual output of generators
+- Actual transmission congestion
+- Ancillary service demand
+
+## Day-Ahead vs Real-Time Comparison
+
+| Characteristic | Day-Ahead | Real-Time |
+|----------------|-----------|-----------|
+| Trading time | One day ahead | Real time (5-60 min ahead) |
+| Clearing frequency | Once per day | Every 5 minutes |
+| Price type | 24-hour block prices | 5-minute prices |
+| Primary purpose | Planning, risk locking | Deviation adjustment, real-time balancing |
+| Participants | Generators, load aggregators, retailers | Mainly调度机构 |
+| Price volatility | Relatively stable | More volatile |
+
+## Market Linkages
+
+### Financial Settlement Flow
+
+```
+1. Day-Ahead Market
+   - Buyer and seller reach agreement
+   - Lock in next-day quantities and prices by hour
+       ↓
+2. Real-Time Operation
+   - Actual generation and load deviate from day-ahead plan
+   - Dispatcher performs real-time balancing
+       ↓
+3. Settlement
+   - Deviation = Actual - Day-Ahead
+   - Deviation settled at real-time price
+```
+
+### Deviation
+
+- **If actual generation > day-ahead plan:** Seller earns extra revenue
+- **If actual generation < day-ahead plan:** Seller must purchase deviation energy
+- **If actual load > day-ahead plan:** Buyer must purchase additional energy
+- **If actual load < day-ahead plan:** Buyer receives a refund
+
+## U.S. Practice
+
+### ISO/RTO Market Structures
+
+| ISO/RTO | Day-Ahead | Real-Time | Characteristics |
+|---------|-----------|-----------|-----------------|
+| CAISO | ✓ | ✓ | Both day-ahead and real-time |
+| ERCOT | ✗ | ✓ | Real-time only (QSE system) |
+| PJM | ✓ | ✓ | Mature DA + RT |
+| ISO-NE | ✓ | ✓ | Sophisticated nodal pricing |
+| MISO | ✓ | ✓ | Covers 15 states |
+| SPP | ✓ | ✓ | Covers Midwest |
+
+### ERCOT's Uniqueness
+
+**ERCOT is the only major ISO/RTO without a day-ahead market**
+
+Reasons:
+- ERCOT is a "reliability" market, not a "financial" market
+- Operates primarily through real-time market (and security-constrained economic dispatch)
+- Relies on the Qualified Scheduling Entity (QSE) system for day-ahead planning
+
+## Implications for Renewable Energy
+
+### Role of Day-Ahead Market
+
+- Renewable developers can lock in prices via day-ahead market
+- Forecast next-day wind/solar output, sell electricity in advance
+
+### Role of Real-Time Market
+
+- When wind/solar output deviates from forecast, adjust via real-time market
+- Storage can provide flexibility in real-time market
+- During negative price periods, storage charges to earn revenue
+
+### Duck Curve and Market Impact
+
+In high solar penetration regions like California, the "duck curve" causes:
+
+1. **Midday low prices:** Solar generation peak, oversupply
+2. **Evening high prices:** Solar drops sharply, demand peaks ("the neck")
+3. **Rapid ramping needs:** Requires fast-ramping flexible resources
+
+This pattern profoundly affects day-ahead and real-time price trends.
+
+## Ancillary Services Market
+
+The real-time market also includes several ancillary service sub-markets:
+
+| Service Type | Function |
+|--------------|---------|
+| Regulation | Automatic generation control, frequency maintenance |
+| Spinning Reserve | Reserve callable within 10 minutes |
+| Non-spinning Reserve | Reserve callable within 10-30 minutes |
+| Load Following | Responds to hourly load changes |
+| Frequency Response | Primary frequency control, automatic response |
+
+## Related Concepts
+
+- **LMP:** Locational Marginal Pricing
+- **SCED:** Security Constrained Economic Dispatch
+- **SCUC:** Security Constrained Unit Commitment
+- **Bid/Offer:** Bid/offer
+- **Clearing:** Market clearing
+- **Congestion:** Transmission congestion
+- **Loss:** Transmission losses
+- **Spread:** Day-ahead vs real-time price spread
+- **Negative Pricing:** Negative prices
+
+## Related Pages
+
+- [[locational-marginal-pricing]] - Locational Marginal Pricing: the calculation basis for day-ahead and real-time LMP
+- [[grid-dispatch-balancing]] - Grid Dispatch and Balancing Areas: execution mechanisms for day-ahead and real-time dispatch
+- [[ancillary-services-market]] - Ancillary Services Market: ancillary service clearing in real-time markets
+- [[ercot-rtc-b-market]] - ERCOT RTC+B: ERCOT's real-time capacity market mechanism
+
+---
+*Last updated: 2026-05-07*
+*Sources: EIA, CAISO, PJM, ERCOT, MISO and other ISO/RTO websites*

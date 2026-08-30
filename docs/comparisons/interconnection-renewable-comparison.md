@@ -1,7 +1,5 @@
 # 美国三大互联系统可再生能源对比
 
-> **English:** Comparison of Renewable Energy Across U.S. Three Major Interconnections
-
 ## 概述
 
 美国电力系统由三个主要互联系统（Interconnections）组成：东部互联（Eastern Interconnection）、西部互联（Western Interconnection）和ERCOT（德州）互联。这三个系统在电网结构、市场机制和可再生能源发展方面存在显著差异。
@@ -119,6 +117,7 @@
 ## "鸭子曲线"现象
 
 ### 什么是鸭子曲线？
+
 鸭子曲线描述的是加州电网在一天内净负荷的变化形态。由于白天太阳能发电快速上升，净负荷（总负荷减去太阳能发电）形成类似鸭子曲线的形状。
 
 ### 各互联系统的挑战
@@ -178,6 +177,191 @@
 - **HVDC：** 高压直流输电
 
 ---
-
-*最后更新：2025-04-16*
+*最后更新：2026-05-07*
 *来源：EIA, FERC, ERCOT, CAISO, PJM, WECC*
+
+---
+
+# English Version
+
+## Comparison of Renewable Energy Across U.S. Three Major Interconnections
+
+## Overview
+
+The U.S. power system consists of three major interconnections: Eastern Interconnection, Western Interconnection, and ERCOT (Texas) Interconnection. These three systems have significant differences in grid structure, market mechanisms, and renewable energy development.
+
+## Basic Comparison
+
+| Characteristic | Eastern Interconnection | Western Interconnection | ERCOT (Texas) |
+|---------------|----------------------|------------------------|---------------|
+| **Coverage** | Eastern 44 states + Canada | Western 11 states + Canada | Texas only |
+| **Grid Operators** | Multiple RTOs/ISOs | Multiple RTOs/ISOs + WECC | ERCOT (independent) |
+| **Connections to Other Interconnections** | Few HVDC ties | Few HVDC ties | **None** (fully isolated) |
+| **Grid Frequency** | 60Hz (synchronous) | 60Hz (synchronous) | 60Hz (synchronous) |
+| **Load Share** | ~75% of U.S. load | ~20% of U.S. load | ~10% of U.S. load |
+
+## Renewable Energy Development Comparison
+
+### Eastern Interconnection
+
+**Resource Endowment:**
+- Abundant wind resources (especially in the Midwest "wind belt")
+- Moderate solar resources
+
+**Market Structure:**
+- PJM Interconnection (largest RTO, covering 13 states + DC)
+- ISO New England (New England region)
+- New York ISO (New York state)
+
+**Renewable Energy:**
+- Relatively high wind share (~8-10% of generation)
+- Rapidly growing solar (mainly in southern and central states)
+- Energy storage rapidly deploying
+
+**Interconnection Characteristics:**
+- Mature RTO market mechanisms
+- Follows FERC Order 2023
+- Long interconnection queue times (4-7 years)
+
+### Western Interconnection
+
+**Resource Endowment:**
+- Best solar resources (Southwest deserts)
+- Abundant wind resources (mountainous areas and plains)
+- Abundant hydropower resources
+
+**Market Structure:**
+- California ISO (CAISO) - largest
+- Multiple small public utilities
+- Western Electricity Coordinating Council (WECC)
+
+**Renewable Energy:**
+- Leading solar installation (largest in the U.S.)
+- California RPS targets: 60% by 2030, 100% by 2045
+- High hydropower share
+
+**Interconnection Characteristics:**
+- CAISO implements strict interconnection standards
+- Extensive experience with energy storage market participation
+- Prominent "duck curve" problem
+
+### ERCOT (Texas) Interconnection
+
+**Resource Endowment:**
+- Abundant solar resources (West Texas)
+- Abundant wind resources (West Texas and Panhandle)
+- No hydropower
+
+**Market Structure:**
+- Fully independent power market
+- No federal regulation (regulated by PUCT)
+- Real-time spot market (15-minute)
+
+**Renewable Energy:**
+- #1 wind installation in the U.S.
+- Rapidly growing solar
+- Energy storage: RTC+B (Real-Time Co-optimization Plus Batteries) launched December 2025
+
+**Interconnection Characteristics:**
+- Relatively simplified interconnection process
+- Market-driven approach
+- Open to energy storage participation in energy and ancillary services markets
+
+## Key Difference Analysis
+
+### 1. Market Mechanisms
+
+| Aspect | Eastern | Western | ERCOT |
+|--------|---------|---------|-------|
+| **Market Model** | Locational Marginal Pricing (LMP) | Mostly LMP | Zonal pricing |
+| **Ancillary Services** | Centralized procurement | Decentralized procurement | Market coupled |
+| **Capacity Market** | Yes (PJM, NYISO) | Partially | **No** |
+
+### 2. Grid Interconnections
+
+- **Eastern ↔ Western:** Connected only via a few HVDC lines
+- **Eastern ↔ ERCOT:** No physical connection
+- **Western ↔ ERCOT:** No physical connection
+- **Consequence:** ERCOT could not import power from other regions during Winter Storm Uri (2021)
+
+### 3. Energy Storage Participation
+
+| Market | Storage Participation Level |
+|--------|---------------------------|
+| CAISO | Most mature (since 2013) |
+| PJM | Rapidly developing |
+| ERCOT | Accelerating after RTC+B launch in December 2025 |
+
+### 4. Interconnection Queue (as of 2024)
+
+| Interconnection | Queue Capacity (GW) | Average Wait Time |
+|----------------|---------------------|-------------------|
+| Eastern | ~1,200 | 5-7 years |
+| Western | ~400 | 3-5 years |
+| ERCOT | ~200 | 2-4 years |
+
+## The "Duck Curve" Phenomenon
+
+### What Is the Duck Curve?
+
+The duck curve describes the change in net load on the California power grid throughout a day. Because solar generation rises rapidly during the day, the net load (total load minus solar generation) forms a shape resembling a duck's profile.
+
+### Challenges by Interconnection
+
+| Interconnection | Challenge |
+|----------------|-----------|
+| **Western (CAISO)** | Most severe duck curve, large ramping demand in afternoon hours |
+| **Eastern** | Increasing solar share, rising ramping needs |
+| **ERCOT** | Strong intermittency, storage provides flexibility |
+
+## Policy Comparison
+
+### California (Western Representative)
+- SB 100: 60% RPS by 2030, 100% clean energy by 2045
+- Energy storage procurement mandate (set by CPUC)
+- Well-developed interconnection rules for distributed energy resources
+
+### Texas (ERCOT)
+- No mandatory RPS target (market-driven)
+- ERCOT market reforms encourage energy storage
+- RTC+B launch in 2025, enabling storage to participate in both energy and ancillary services markets simultaneously
+
+### Eastern States
+- Most states have RPS targets (ranging from 30%-100%)
+- Follow FERC Order 2023
+- Multiple states have set energy storage procurement targets
+
+## Implications for Solar + Storage
+
+### Which Interconnection to Choose?
+
+**Reasons to choose Western (CAISO):**
+- Mature energy storage market participation rules
+- Well-developed grid infrastructure
+- Clear policy and subsidy support
+- Challenge: Strict interconnection standards and long queues
+
+**Reasons to choose ERCOT:**
+- Relatively fast interconnection process
+- Abundant solar and wind resources
+- More flexible energy storage market participation after 2025
+- Challenge: No capacity market, bear your own risk
+
+**Reasons to choose Eastern:**
+- Huge load demand
+- Multiple RTOs provide market competition
+- Energy storage rapidly developing
+- Challenge: Long interconnection queue times
+
+## Related Concepts
+
+- **RTO/ISO:** Regional Transmission Organization / Independent System Operator
+- **LMP (Locational Marginal Pricing):** Locational Marginal Pricing
+- **RPS (Renewables Portfolio Standard):** Renewable Portfolio Standard
+- **Duck Curve:** Solar duck curve
+- **RTC+B (Real-Time Co-optimization Plus Batteries):** ERCOT real-time co-optimization with batteries
+- **HVDC:** High Voltage Direct Current transmission
+
+---
+*Last updated: 2026-05-07*
+*Sources: EIA, FERC, ERCOT, CAISO, PJM, WECC*

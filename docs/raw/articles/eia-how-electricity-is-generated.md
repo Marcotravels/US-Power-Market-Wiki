@@ -42,3 +42,52 @@ URL: https://www.eia.gov/energyexplained/electricity/how-electricity-is-generate
 **风力涡轮机**
 - 风能驱动
 - 可再生能源快速增长的来源
+
+---
+
+# English Version
+
+## How Electricity Is Generated
+
+Source: EIA - Energy Explained
+URL: https://www.eia.gov/energyexplained/electricity/how-electricity-is-generated.php
+
+## Generator Principles
+
+An electric generator is a device that converts energy into electricity. Most electricity generation is based on scientist Michael Faraday's 1831 discovery: moving a magnet through a coil of wire induces an electric current.
+
+**Electromagnetic generators** use electromagnets (magnets produced by electricity, not traditional magnets). The basic structure includes:
+- **Stator** - a stationary cylinder made of insulated coils
+- **Rotor** - an electromagnetic shaft
+
+As the rotor spins, each coil section produces electric current, and these currents merge into one large current that is sent to consumers through power lines.
+
+## Turbine-Driven Generators
+
+Most electricity in the United States and the world comes from power plants that use turbine-driven generators. In a turbine, a flowing fluid (water, steam, combustion gases, or air) pushes blades mounted on a rotor shaft. The fluid pushes the blades to spin the rotor shaft, and the generator converts the rotor's mechanical energy into electrical energy.
+
+### Turbine Types
+
+**Steam Turbines**
+- Used to generate most of the world's electricity
+- Accounted for approximately 42% of U.S. electricity generation in 2022
+- Fuel burned in a boiler produces hot water and steam; steam drives turbines which spin generators
+- Nuclear power plants and geothermal power plants use steam turbines
+
+**Combustion/Gas Turbines**
+- Similar to jet engines
+- Burning gas or liquid fuel produces hot gases that push the blades
+
+**Combined-Cycle**
+- High-temperature waste gases from gas turbines are used to drive steam turbines for secondary electricity generation
+- Accounted for approximately 34% of U.S. electricity generation in 2022
+- One of the most efficient methods of electricity generation
+
+**Hydroelectric Turbines**
+- Use the force of flowing water to spin blades and drive generators
+- Accounted for approximately 6% of U.S. electricity generation in 2022
+- Pumped storage power plants are also a form of energy storage system
+
+**Wind Turbines**
+- Powered by wind energy
+- The fastest-growing source of renewable energy

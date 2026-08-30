@@ -1,7 +1,5 @@
 # 辅助服务市场详解
 
-> **English:** Ancillary Services Market
-
 ## 概述
 
 辅助服务市场（Ancillary Services Market）是电力系统运行中不可或缺的一环，用于确保电网的安全、可靠和稳定运行。这些服务虽然不直接向用户供电，但对于维持电力系统的实时平衡、频率稳定和电压控制至关重要。
@@ -170,7 +168,7 @@
 
 | 服务类型 | 市场机制 | 特点 |
 |---------|---------|------|
-| 调频 | 调频市场（Regulation Market） | 分上下调频， Mileage支付 |
+| 调频 | 调频市场（Regulation Market） | 分上下调频，Mileage支付 |
 | 旋转备用 | 备用市场（Reserve Market） | 与能量联合优化 |
 | 非旋转备用 | 备用市场 | 10-30分钟响应 |
 | 调峰 | 实时市场 | 每5分钟出清 |
@@ -274,6 +272,272 @@
 - [[renewable-interconnection-policy]] - 可再生能源并网政策：可再生能源对辅助服务的影响
 
 ---
-
-*最后更新：2026-04-15*
+*最后更新：2026-05-07*
 *来源：CAISO, PJM, ERCOT, FERC, NERC*
+
+---
+
+# English Version
+
+## Ancillary Services Market
+
+## Overview
+
+The Ancillary Services Market is an indispensable part of power system operation, ensuring the safe, reliable, and stable operation of the power grid. While these services do not directly supply electricity to customers, they are crucial for maintaining real-time balance, frequency stability, and voltage control of the power system.
+
+## Definition of Ancillary Services
+
+### What Are Ancillary Services?
+
+Ancillary services are all support services beyond basic generation and transmission services. These services are primarily provided to system operators (such as CAISO, PJM, ERCOT, etc.), helping them maintain:
+
+- **Frequency stability** — keeping the system at 60Hz
+- **Voltage stability** — maintaining voltage within acceptable ranges
+- **Capacity adequacy** — having sufficient reserve capacity for emergencies
+- **System security** — responding to various unexpected disturbances
+
+### Difference Between Energy Market and Ancillary Services Market
+
+| Characteristic | Energy Market | Ancillary Services Market |
+|----------------|--------------|-------------------------|
+| Main product | Electricity (MWh) | System reliability services |
+| Trading method | Buy/sell electricity | Procure reserve capacity |
+| Unit of measurement | MWh | MW (capacity) |
+| Time dimension | 24-hour continuous | Real-time standby |
+| Purpose | Meet load demand | Ensure system security |
+
+## Types of Ancillary Services
+
+### 1. Regulation Service
+
+**Definition:** Regulation is the most granular ancillary service, automatically adjusting generator output every 4-6 seconds through the Automatic Generation Control (AGC) system to respond to minor load fluctuations and generation deviations, maintaining system frequency at 60Hz.
+
+**Characteristics:**
+- Response time: seconds
+- Regulation accuracy: high
+- Duration: continuous operation
+- Direction: bidirectional (increase or decrease output)
+
+**Market mechanism:**
+- Typically procured through a "Regulation Market"
+- Two types of payments: capacity payment and performance payment
+- CAISO divides regulation into "Regulation Up" and "Regulation Down"
+
+### 2. Spinning Reserve
+
+**Definition:** Spinning reserve refers to generation capacity that is already synchronized to the grid and can increase output to rated capacity within 10 minutes. These units typically operate below their rated output, ready to respond to dispatch instructions at any time.
+
+**Characteristics:**
+- Response time: within 10 minutes
+- Must be synchronized with the grid
+- Typically provided by gas turbines or hydropower
+
+**Capacity requirements:**
+- Usually 3-5% of system peak load
+- Or the larger of the largest single unit capacity
+
+### 3. Non-Spinning Reserve
+
+**Definition:** Non-spinning reserve refers to generation capacity that can start up and increase to rated output within 30 minutes. These resources may not yet be synchronized to the grid, or may be operating at minimum output.
+
+**Characteristics:**
+- Response time: 10-30 minutes
+- Does not need to be synchronized with the grid
+- Includes: fast-start gas turbines, demand response resources, storage, etc.
+
+### 4. Load Following
+
+**Definition:** Load following service responds to hour-level load changes, with slower response than regulation but larger adjustment range.
+
+**Characteristics:**
+- Response time: minutes to tens of minutes
+- Manual or automatic dispatch
+- Typically provided by flexible gas-fired or hydropower units
+
+**Note:** In some markets, load following is categorized under the energy market rather than as a separate ancillary service.
+
+### 5. Frequency Response Service
+
+**Definition:** Frequency response is an inherent characteristic of generation units, automatically adjusting output when system frequency deviates from 60Hz. This is the grid's "first line of defense."
+
+**Characteristics:**
+- Response time: seconds
+- Automatic response without dispatch instructions
+- Typically an obligation service for generation units
+
+### 6. Voltage Support Service
+
+**Definition:** Voltage support service maintains grid voltage within acceptable ranges by providing or absorbing reactive power.
+
+**Characteristics:**
+- Reactive power measured in MVAr
+- Typically provided by synchronous generators, capacitor banks, or Static Var Compensators (SVC)
+- Some markets have independent voltage support markets
+
+### 7. Black Start Service
+
+**Definition:** Black start service is the ability of a generator to start up without external power assistance after a large-scale blackout.
+
+**Characteristics:**
+- Only used in emergency situations
+- Requires specialized startup equipment
+- Typically procured through long-term contracts
+
+## Market Mechanisms and Procurement Methods
+
+### Ancillary Services Procurement Process
+
+```
+1. Demand determination
+   - System operator determines various ancillary service requirements based on security standards
+       ↓
+2. Market clearing
+   - Resources submit offers
+   - System clears at lowest cost
+       ↓
+3. Dispatch assignment
+   - Cleared resources are assigned specific tasks
+       ↓
+4. Real-time execution
+   - Resources operate according to dispatch instructions
+       ↓
+5. Settlement and payment
+   - Payment based on actual service and performance
+```
+
+### Two Procurement Models
+
+**1. Mandatory Procurement**
+- Specific ancillary services must be procured
+- Operator-designated or bid
+
+**2. Market-Based Procurement**
+- Purchased through competitive markets
+- Principle of optimizing price and service quality
+
+### Pricing Mechanisms
+
+**Capacity Payment:**
+- Paid per reserved reserve capacity ($/MW)
+- Compensates for opportunity cost
+
+**Performance Payment:**
+- Paid per actual regulation quantity ($/MWh)
+- Incentivizes efficient response
+
+**At California CAISO:**
+- Regulation service divided into "Regulation Up" and "Regulation Down"
+- Bidirectional pricing incentivizes bidirectional regulation capability
+
+## Ancillary Services Markets by ISO/RTO
+
+### California (CAISO)
+
+| Service Type | Market Mechanism | Characteristics |
+|-------------|------------------|-----------------|
+| Regulation | Regulation Market | Up/down regulation, Mileage payment |
+| Spinning Reserve | Reserve Market | Jointly optimized with energy |
+| Non-spinning Reserve | Reserve Market | 10-30 minute response |
+| Load Following | Real-time Market | Clears every 5 minutes |
+
+### PJM
+
+| Service Type | Market Mechanism | Characteristics |
+|-------------|------------------|-----------------|
+| Regulation | Regulation Market | Capacity fee + performance fee |
+| Synchronized Reserve | Capacity Market | Capacity fee |
+| Non-synchronized Reserve | Capacity Market | Capacity fee |
+| Operating Reserve | Real-time Market | Real-time dispatch |
+
+### ERCOT
+
+| Service Type | Market Mechanism | Characteristics |
+|-------------|------------------|-----------------|
+| Regulation | ERCOT Ancillary Services Market | Bidirectional pricing |
+| Spinning Reserve | ERCOT Ancillary Services Market | Capacity market |
+| Non-spinning Reserve | ERCOT Ancillary Services Market | Capacity market |
+
+## Ancillary Services in the Energy Storage Era
+
+### Rise of Battery Energy Storage (BESS)
+
+Energy storage systems, especially Battery Energy Storage Systems, are transforming ancillary services markets:
+
+**Advantages:**
+- Fast response time (milliseconds)
+- High regulation accuracy
+- Bidirectional charge/discharge operation
+- Small footprint
+
+**Participation methods:**
+1. **Regulation service:** Batteries can respond quickly to AGC signals
+2. **Spinning reserve:** Can discharge quickly to provide capacity
+3. **Load following:** Fast ramping capability
+
+### Virtual Bidding
+
+Energy storage can participate in multiple markets:
+- Energy market: buy/sell electricity
+- Regulation market: provide regulation services
+- Capacity market: provide reserve capacity
+
+This "arbitrage" increases market complexity but also improves efficiency.
+
+### California's Energy Storage Procurement Targets
+
+**AB 2514 (2010):**
+- Achieve 1.325 GW energy storage by 2020
+
+**CPUC Decision (2020):**
+- 2024: 52 GW new energy storage (most distributed)
+- 2030: More aggressive energy storage targets
+
+## Demand Response Participation in Ancillary Services
+
+### What Is Demand Response?
+
+Demand Response (DR) refers to customers providing ancillary services to the grid by adjusting electricity usage behavior or using distributed energy resources.
+
+### Participation Methods
+
+| Type | Description | Response Time |
+|------|------------|---------------|
+| Load scheduling | Customer reduces electricity usage | 10-30 minutes |
+| Emergency demand response | Load reduction in emergencies | 10 minutes |
+| Regulation participation | Load as regulation resource | Seconds |
+
+## Cost and Settlement of Ancillary Services
+
+### Cost Allocation
+
+Ancillary service costs are typically allocated through:
+- **By electricity consumption:** Included in end-user electricity prices
+- **By capacity allocation:** Based on customer's peak capacity proportion
+- **By load factor:** Based on customer's load factor
+
+### Typical Cost Proportion
+
+- Ancillary service costs account for approximately **3-7%** of retail electricity prices
+- Regulation service is the largest single cost item
+
+## Related Concepts
+
+- **AGC:** Automatic Generation Control
+- **Regulation Up/Down:** Upward/downward regulation
+- **Spinning/Non-spinning Reserve:** Spinning/non-spinning reserve
+- **Mileage:** Actual regulation quantity for regulation service
+- **NERC:** North American Electric Reliability Council
+- **WECC:** Western Electricity Coordinating Council
+- **CAISO:** California Independent System Operator
+- **PJM:** Pennsylvania-New Jersey-Maryland Interconnection
+
+## Related Pages
+
+- [[grid-dispatch-balancing]] - Grid Dispatch and Balancing Areas: dispatch execution layer for ancillary services
+- [[locational-marginal-pricing]] - Locational Marginal Pricing: pricing basis for ancillary service costs
+- [[ercot-rtc-b-market]] - ERCOT RTC+B: latest market mechanism for energy storage participation in ancillary services
+- [[renewable-interconnection-policy]] - Renewable Interconnection Policy: impact of renewable energy on ancillary services
+
+---
+*Last updated: 2026-05-07*
+*Sources: CAISO, PJM, ERCOT, FERC, NERC*

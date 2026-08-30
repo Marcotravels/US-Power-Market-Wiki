@@ -184,6 +184,196 @@ ACE = (NIA - SCH) - 10B × (f - f₀)
 - [[ercot-rtc-b-market]] - ERCOT RTC+B：实时容量市场的调度机制
 
 ---
-
-*最后更新：2026-04-15*
+*最后更新：2026-05-07*
 *来源：EIA, NERC, 各ISO/RTO官网*
+
+---
+
+# English Version
+
+# Grid Dispatch and Balancing Authorities
+
+## Overview
+
+Grid Dispatch and Balancing Authority (BA) are the core mechanisms ensuring real-time stable operation of power systems. Simply put, a Balancing Authority is a defined geographic area where an entity is responsible for maintaining real-time balance of electricity supply and demand, ensuring the grid frequency stays stable at 60Hz (U.S. standard).
+
+## Definition of Balancing Authority
+
+### What Is a Balancing Authority?
+
+A Balancing Authority is the fundamental unit of grid management defined by NERC (North American Electric Reliability Corporation). Each Balancing Authority is operated by a Balancing Authority Operator, whose core responsibilities include:
+
+| Responsibility | English | Description |
+|---------------|---------|-------------|
+| Frequency Control | Frequency Control | Maintain grid frequency within 60Hz ± 0.05Hz |
+| Real-time Balance | Real-time Balance | Ensure generation equals load (plus transmission losses) |
+| Dispatch Instruction | Dispatch Instruction | Issue commands to generators to increase/decrease output |
+| ACE Management | Area Control Error Management | Keep Area Control Error within acceptable range |
+
+### How Many Balancing Authorities in the U.S.?
+
+As of 2024, the contiguous U.S. has approximately **70** Balancing Authorities:
+
+- **Western Interconnection:** ~38 Balancing Authorities
+- **Eastern Interconnection:** ~25 Balancing Authorities
+- **ERCOT (Texas):** ~2 Balancing Authorities (ERCOT itself as one, plus an overlapping BA)
+- **Alaska and Hawaii:** Multiple independent Balancing Authorities each
+
+### Major Balancing Authority Examples
+
+| BA Code | Name | Coverage Area |
+|---------|------|---------------|
+| BANC | Balancing Authority of Northern California | Northern California |
+| CAISO | California Independent System Operator | Entire California |
+| ISO-NE | Independent System Operator of New England | New England region |
+| PJM | PJM Interconnection | Eastern 13 states + DC |
+| ERCOT | Electric Reliability Council of Texas | All of Texas |
+| SPP | Southwest Power Pool | 10 Midwestern states |
+| MISO | Midcontinent Independent System Operator | 15 Midwestern states |
+
+## Grid Dispatch Mechanisms
+
+### Hierarchical Dispatch Structure
+
+Grid dispatch is a multi-level system, from top to bottom:
+
+```
+National Dispatch (NERC)
+    ↓
+Regional Dispatch (RC - Reliability Coordinator)
+    ↓
+Balancing Authority Dispatch (BA)
+    ↓
+Generator Dispatch
+```
+
+### Core Dispatch Tasks
+
+1. **Economic Dispatch**
+   - Allocate generation output among units at minimum cost while meeting security constraints
+   - Typically updated every 5 minutes
+
+2. **Unit Commitment**
+   - Decide which generating units need to start up, one or more days/hours ahead
+   - Consider start/stop costs, minimum run times, ramping rates, etc.
+
+3. **Frequency Regulation**
+   - Automatically adjust generator output to respond to small load fluctuations
+   - Executed by AGC (Automatic Generation Control) system
+
+4. **Load Following**
+   - Respond to hour-level load changes
+   - Typically handled by flexible gas or hydro generators
+
+5. **Reserve Services**
+   - Spinning Reserve
+   - Non-spinning Reserve
+   - Contingency Reserve
+
+### Dispatch Center Examples
+
+| Dispatch Center | English Name | Operating Entity |
+|---------------|--------------|-----------------|
+| California Power Dispatch Center | CAISO | California Independent System Operator |
+| Eastern Power Dispatch Center | PJM | PJM Interconnection |
+| Texas Power Dispatch Center | ERCOT | Electric Reliability Council of Texas |
+| Midcontinent Power Dispatch Center | MISO | Midcontinent Independent System Operator |
+
+## Real-Time Operation and Dispatch Process
+
+### Day-Ahead Market
+
+- **Time:** One day ahead (typically midnight to 11 PM the next day)
+- **Content:** Buyers and sellers submit bids and offers; system clears to form day-ahead prices
+- **Purpose:** Provide an economically feasible generation plan for the next day
+
+### Real-Time Market
+
+- **Time:** Real-time operation (5-minute or 15-minute intervals)
+- **Content:** Adjust based on deviations between actual load and forecasts
+- **Purpose:** Resolve differences between day-ahead plans and real-time actuals
+
+### Dispatch Instruction Flow
+
+```
+1. Load Forecast
+       ↓
+2. Unit Commitment & Economic Dispatch
+       ↓
+3. Generation Schedule
+       ↓
+4. Automatic Generation Control (AGC)
+       ↓
+5. Real-time Balancing
+```
+
+## Area Control Error (ACE)
+
+### What Is ACE?
+
+Area Control Error (ACE) is the key metric measuring whether a Balancing Authority maintains real-time power balance.
+
+**ACE Calculation Formula:**
+```
+ACE = (NIA - SCH) - 10B × (f - f₀)
+
+Where:
+- NIA = Net Interchange Actual
+- SCH = Net Interchange Scheduled
+- B = Balancing Authority frequency bias
+- f = Actual system frequency
+- f₀ = Nominal frequency (60Hz)
+```
+
+### ACE Control Standards
+
+- **CPS1 (CPS1 Performance):** Measures the BA's contribution to frequency deviation
+- **CPS2 (CPS2 Performance):** Measures BA's balancing performance within 10 minutes
+- **DMA (Disturbance Control Standard):** Measures BA's recovery capability after disturbances
+
+## Renewable Energy and Dispatch Challenges
+
+### Challenges Faced
+
+1. **Intermittency**
+   - Solar and wind output varies with weather
+   - Traditional dispatch is based on predictable load curves
+
+2. **Forecast Errors**
+   - Short-term load and renewable generation forecasts have deviations
+   - Requires more reserve capacity
+
+3. **Ramp Requirements**
+   - Solar drop at sunset requires rapid increase in other generation
+   - "Duck curve" problem is particularly prominent in California
+
+### Solutions
+
+| Solution | English | Description |
+|---------|---------|-------------|
+| Energy Storage | Energy Storage | Battery storage, pumped hydro storage |
+| Demand Response | Demand Response | Load-side participation in regulation |
+| Fast-start Units | Fast-start Units | Flexible power sources like gas turbines |
+| Inter-regional Dispatch | Inter-regional Dispatch | Leverage time zone and seasonal differences |
+| Improved Forecasting | Improved Forecasting | AI/machine learning forecasting |
+
+## Related Concepts
+
+- **NERC:** North American Electric Reliability Council
+- **RC:** Reliability Coordinator
+- **AGC:** Automatic Generation Control
+- **LMP:** Locational Marginal Pricing
+- **LDA:** Locational Delivery Area
+- **SCED:** Security Constrained Economic Dispatch
+- **SCUC:** Security Constrained Unit Commitment
+
+## Related Pages
+
+- [[electricity-markets-day-ahead-real-time]] - Electricity Market Types: Day-ahead and real-time market dispatch relationship
+- [[ancillary-services-market]] - Ancillary Services Market: Support services for dispatch execution
+- [[locational-marginal-pricing]] - Locational Marginal Pricing: Economic signals for dispatch decisions
+- [[ercot-rtc-b-market]] - ERCOT RTC+B: Real-time co-optimization dispatch mechanism
+
+---
+*Last updated: 2026-05-07*
+*Sources: EIA, NERC, various ISO/RTO official websites*
